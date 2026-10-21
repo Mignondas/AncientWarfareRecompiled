@@ -10,6 +10,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.shadowmage.ancientwarfarerecompiled.core.config.AWCoreConfig;
+import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreItems;
 
 /**
  * Point d'entrée de AncientWarfareRecompiled.
@@ -24,6 +25,8 @@ public class AncientWarfareRecompiled {
 
 	public AncientWarfareRecompiled(IEventBus modEventBus, ModContainer modContainer) {
 		modEventBus.addListener(this::commonSetup);
+
+		AWCoreItems.register(modEventBus);
 
 		modContainer.registerConfig(ModConfig.Type.COMMON, AWCoreConfig.SPEC);
 	}
