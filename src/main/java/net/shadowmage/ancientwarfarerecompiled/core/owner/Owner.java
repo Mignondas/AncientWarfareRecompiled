@@ -2,6 +2,7 @@ package net.shadowmage.ancientwarfarerecompiled.core.owner;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +43,7 @@ public class Owner {
 	}
 
 	public Owner(Level level, String name) {
-		Player player = level.getPlayerByName(name);
+		Player player = level instanceof ServerLevel serverLevel ? serverLevel.getServer().getPlayerList().getPlayerByName(name) : null;
 		uuid = player != null ? player.getUUID() : new UUID(0, 0);
 		this.name = name;
 	}
