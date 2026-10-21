@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.BlockHitResult;
-import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTileTypes;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.IHammerRotatable;
+import net.shadowmage.ancientwarfarerecompiled.core.item.ItemHammer;
 import net.shadowmage.ancientwarfarerecompiled.core.tile.TileEngineeringStation;
 
 /**
@@ -56,6 +56,10 @@ public class BlockEngineeringStation extends Block implements EntityBlock, IHamm
 
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+		// avec un marteau en main, laisse l'objet agir (rotation / mode travail)
+		if (player.getMainHandItem().getItem() instanceof ItemHammer || player.getOffhandItem().getItem() instanceof ItemHammer) {
+			return InteractionResult.PASS;
+		}
 		// L'interface graphique sera ouverte ici lors du portage de la GUI.
 		return InteractionResult.sidedSuccess(level.isClientSide);
 	}

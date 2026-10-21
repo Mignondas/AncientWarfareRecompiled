@@ -1,17 +1,17 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=south": {
       "model": "ancientwarfarerecompiled:block/research_station"
     },
-    "facing=east": {
+    "facing=west": {
       "model": "ancientwarfarerecompiled:block/research_station",
       "y": 90
     },
-    "facing=south": {
+    "facing=north": {
       "model": "ancientwarfarerecompiled:block/research_station",
       "y": 180
     },
-    "facing=west": {
+    "facing=east": {
       "model": "ancientwarfarerecompiled:block/research_station",
       "y": 270
     }
