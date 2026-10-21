@@ -3,6 +3,8 @@ package net.shadowmage.ancientwarfarerecompiled.core.menu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -18,11 +20,12 @@ import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreMenus;
 import net.shadowmage.ancientwarfarerecompiled.core.tile.TileResearchStation;
 
 /**
- * Menu de la station de recherche : emplacement du livre et inventaire du joueur.
- * Le filtre sur le livre de recherche sera ajouté avec l'objet « research_book ».
+ * Menu de la station de recherche : livre (1), ressources de recherche (9) et inventaire du joueur.
  */
 public class ResearchStationMenu extends AbstractContainerMenu {
 	private static final int BOOK_SLOTS = 1;
+	private static final int RESOURCE_SLOTS = 9;
+	private static final int STATION_SLOTS = BOOK_SLOTS + RESOURCE_SLOTS;
 
 	private final BlockPos pos;
 	private final ContainerLevelAccess access;
@@ -36,10 +39,16 @@ public class ResearchStationMenu extends AbstractContainerMenu {
 		this.pos = pos;
 		this.access = ContainerLevelAccess.create(inventory.player.level(), pos);
 
-		IItemHandler book = inventory.player.level().getBlockEntity(pos) instanceof TileResearchStation tile
-				? tile.bookSlot
-				: new ItemStackHandler(BOOK_SLOTS);
-		addSlot(new SlotItemHandler(book, 0, 80, 18));
+		TileResearchStation tile = inventory.player.level().getBlockEntity(pos) instanceof TileResearchStation t ? t : null;
+		IItemHandler book = tile != null ? tile.bookSlot : new ItemStackHandler(BOOK_SLOTS);
+		IItemHandler resources = tile != null ? tile.resourceInventory : new ItemStackHandler(RESOURCE_SLOTS);
+
+		addSlot(new SlotItemHandler(book, 0, 8, 18));
+		for (int row = 0; row < 3; row++) {
+			for (int col = 0; col < 3; col++) {
+				addSlot(new SlotItemHandler(resources, col + row * 3, 80 + col * 18, 18 + row * 18));
+			}
+		}
 
 		for (int row = 0; row < 3; row++) {
 			for (int col = 0; col < 9; col++) {
@@ -67,11 +76,11 @@ public class ResearchStationMenu extends AbstractContainerMenu {
 		if (slot != null && slot.hasItem()) {
 			ItemStack stack = slot.getItem();
 			result = stack.copy();
-			if (index < BOOK_SLOTS) {
-				if (!moveItemStackTo(stack, BOOK_SLOTS, slots.size(), true)) {
+			if (index < STATION_SLOTS) {
+				if (!moveItemStackTo(stack, STATION_SLOTS, slots.size(), true)) {
 					return ItemStack.EMPTY;
 				}
-			} else if (!moveItemStackTo(stack, 0, BOOK_SLOTS, false)) {
+			} else if (!moveItemStackTo(stack, 0, BOOK_SLOTS, false) && !moveItemStackTo(stack, BOOK_SLOTS, STATION_SLOTS, false)) {
 				return ItemStack.EMPTY;
 			}
 			if (stack.isEmpty()) {
@@ -90,9 +99,9 @@ public class ResearchStationMenu extends AbstractContainerMenu {
 	public static void open(ServerPlayer player, BlockPos pos) {
 		BlockEntity be = player.level().getBlockEntity(pos);
 		if (be instanceof TileResearchStation) {
-			player.openMenu(new net.minecraft.world.SimpleMenuProvider(
+			player.openMenu(new SimpleMenuProvider(
 					(id, inv, p) -> new ResearchStationMenu(id, inv, pos),
-					net.minecraft.network.chat.Component.translatable("block.ancientwarfarerecompiled.research_station")),
+					Component.translatable("block.ancientwarfarerecompiled.research_station")),
 					buf -> buf.writeBlockPos(pos));
 		}
 	}

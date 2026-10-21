@@ -31,5 +31,10 @@
   "guistrings.core.hammer.work_mode": "Clic droit sur un chantier pour y transférer de l'énergie",
   "guistrings.core.hammer.rotate_mode": "Clic droit sur un bloc pour le tourner",
   "block.ancientwarfarerecompiled.engineering_station": "Établi d'ingénierie",
-  "block.ancientwarfarerecompiled.research_station": "Station de recherche"
+  "block.ancientwarfarerecompiled.research_station": "Station de recherche",
+  "item.ancientwarfarerecompiled.research_book": "Livre de recherche",
+  "guistrings.research.researcher_name": "Chercheur",
+  "guistrings.research.no_researcher": "Aucun",
+  "guistrings.research.right_click_to_bind": "Clic droit pour le lier à vous",
+  "guistrings.research.book_bound": "Livre de recherche lié à vous"
 }

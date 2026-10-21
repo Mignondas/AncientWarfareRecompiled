@@ -31,5 +31,10 @@
   "guistrings.core.hammer.work_mode": "Use Item to Work at Worksite",
   "guistrings.core.hammer.rotate_mode": "Use Item to Rotate blocks",
   "block.ancientwarfarerecompiled.engineering_station": "Engineering Station",
-  "block.ancientwarfarerecompiled.research_station": "Research Station"
+  "block.ancientwarfarerecompiled.research_station": "Research Station",
+  "item.ancientwarfarerecompiled.research_book": "Research Book",
+  "guistrings.research.researcher_name": "Researcher",
+  "guistrings.research.no_researcher": "None",
+  "guistrings.research.right_click_to_bind": "Right-click to bind to yourself",
+  "guistrings.research.book_bound": "Research book bound to you"
 }
