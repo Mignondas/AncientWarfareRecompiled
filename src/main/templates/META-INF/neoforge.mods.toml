@@ -11,6 +11,9 @@ credits="Shadowmage, contributeurs d'Ancient Warfare 2 ; port NeoForge 1.21.1 en
 description='''
 AncientWarfareRecompiled est un portage de Ancient Warfare 2 (Minecraft 1.12.2, Forge)
 vers Minecraft 1.21.1 et NeoForge. Projet en cours de développement.
+
+Build de développement : ${mod_version}
+Avancement : phase 1 (utilitaires Core et NBT portés, blocs et objets à venir)
 '''
 
 [[dependencies.${mod_id}]]
