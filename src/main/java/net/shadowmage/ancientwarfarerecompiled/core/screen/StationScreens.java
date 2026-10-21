@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.Slot;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -24,6 +25,15 @@ public final class StationScreens {
 
 	private StationScreens() {}
 
+	/*
+	 * Fond de chaque emplacement (sprite vanilla « container/slot »), dessiné sous les objets.
+	 */
+	static void drawSlotBackgrounds(GuiGraphics graphics, AbstractContainerMenu menu, int leftPos, int topPos) {
+		for (Slot slot : menu.slots) {
+			graphics.blitSprite(ResourceLocation.withDefaultNamespace("container/slot"), leftPos + slot.x - 1, topPos + slot.y - 1, 18, 18);
+		}
+	}
+
 	@SubscribeEvent
 	public static void register(RegisterMenuScreensEvent event) {
 		event.register(AWCoreMenus.ENGINEERING_STATION.get(), EngineeringStationScreen::new);
@@ -40,6 +50,7 @@ public final class StationScreens {
 		@Override
 		protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
 			graphics.blit(BACKGROUND, leftPos, topPos, imageWidth, imageHeight, 0, 0, 256, 240, 256, 256);
+			drawSlotBackgrounds(graphics, menu, leftPos, topPos);
 		}
 
 		@Override
@@ -60,6 +71,7 @@ public final class StationScreens {
 		@Override
 		protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
 			graphics.blit(BACKGROUND, leftPos, topPos, imageWidth, imageHeight, 0, 0, 256, 240, 256, 256);
+			drawSlotBackgrounds(graphics, menu, leftPos, topPos);
 		}
 
 		@Override

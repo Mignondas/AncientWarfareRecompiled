@@ -97,6 +97,30 @@ ORE = {
 COMPONENT = ["wooden_gear_set", "iron_gear_set", "steel_gear_set", "wooden_bearings", "iron_bearings",
              "steel_bearings", "wooden_torque_shaft", "iron_torque_shaft", "steel_torque_shaft"]
 
+# Objets vanilla renommés ou éclatés en 1.21 (métadonnée -> objet distinct)
+VANILLA_RENAME = {"minecraft:noteblock": "minecraft:note_block", "minecraft:golden_rail": "minecraft:powered_rail"}
+WOOL = ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+        "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
+DYE = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray",
+       "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"]
+FISH = ["cod", "salmon", "tropical_fish", "pufferfish"]
+
+
+def resolve_vanilla(item, data):
+    """Retourne l'identifiant 1.21 pour un objet vanilla 1.12 (nom et métadonnée), ou None."""
+    if item in VANILLA_RENAME:
+        return VANILLA_RENAME[item]
+    if item == "minecraft:wool" and 0 <= data < 16:
+        return f"minecraft:{WOOL[data]}_wool"
+    if item == "minecraft:dye" and 0 <= data < 16:
+        return f"minecraft:{DYE[data]}_dye"
+    if item == "minecraft:fish" and 0 <= data < 4:
+        return f"minecraft:{FISH[data]}"
+    if item == "minecraft:fish":
+        return "minecraft:cod"
+    return None
+
+
 # Métadonnées vanilla équivalentes à un autre objet
 DATA_FIX = {("minecraft:coal", 1): "minecraft:charcoal"}
 
@@ -143,6 +167,9 @@ def convert_item(entry, where):
             return ingredient_from_id(f"{NS}:{COMPONENT[idx]}", where)
         report["skip"].append(f"{where}: composant inconnu {idx}")
         return None
+    resolved = resolve_vanilla(item, entry.get("data", 0))
+    if resolved is not None:
+        return ingredient_from_id(resolved, where)
     if (item, entry.get("data", 0)) in DATA_FIX:
         return ingredient_from_id(DATA_FIX[(item, entry.get("data", 0))], where)
     if entry.get("data", 0) not in (0, 32767) and not item.startswith("#"):
@@ -188,6 +215,8 @@ def convert_result(res, where):
         res = {"item": ident, "count": res.get("count", 1)}
     if ident in AW_ITEMS:
         ident = AW_ITEMS[ident]
+    elif ident.startswith("minecraft:") and resolve_vanilla(ident, res.get("data", 0)):
+        ident = resolve_vanilla(ident, res.get("data", 0))
     elif not (ident.startswith("minecraft:") or ident.startswith(f"{NS}:")):
         report["skip"].append(f"{where}: résultat non porté {ident}")
         return None
