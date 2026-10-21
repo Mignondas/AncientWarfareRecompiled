@@ -26,6 +26,7 @@ public final class AWCoreTabs {
 			.displayItems((parameters, output) -> {
 				output.accept(AWCoreItems.STEEL_INGOT.get());
 				output.accept(AWCoreItems.ENGINEERING_STATION_ITEM.get());
+				output.accept(AWCoreItems.RESEARCH_BOOK.get());
 				output.accept(AWCoreItems.RESEARCH_STATION_ITEM.get());
 				output.accept(AWCoreItems.WOODEN_HAMMER.get());
 				output.accept(AWCoreItems.STONE_HAMMER.get());

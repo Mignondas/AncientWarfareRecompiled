@@ -9,6 +9,7 @@ import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.core.item.AWToolMaterial;
 import net.shadowmage.ancientwarfarerecompiled.core.item.ItemHammer;
 import net.shadowmage.ancientwarfarerecompiled.core.item.ItemQuill;
+import net.shadowmage.ancientwarfarerecompiled.core.item.ItemResearchBook;
 
 /**
  * Objets du module Core.
@@ -34,6 +35,8 @@ public final class AWCoreItems {
 	public static final DeferredItem<ItemHammer> IRON_HAMMER = ITEMS.register("iron_hammer", () -> new ItemHammer(AWToolMaterial.IRON));
 	public static final DeferredItem<ItemHammer> GOLD_HAMMER = ITEMS.register("gold_hammer", () -> new ItemHammer(AWToolMaterial.GOLD));
 	public static final DeferredItem<ItemHammer> DIAMOND_HAMMER = ITEMS.register("diamond_hammer", () -> new ItemHammer(AWToolMaterial.DIAMOND));
+
+	public static final DeferredItem<ItemResearchBook> RESEARCH_BOOK = ITEMS.register("research_book", ItemResearchBook::new);
 
 	/* plumes : une par matériau */
 	public static final DeferredItem<ItemQuill> WOODEN_QUILL = ITEMS.register("wooden_quill", () -> new ItemQuill(AWToolMaterial.WOOD));

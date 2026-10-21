@@ -8,6 +8,9 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTileTypes;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import javax.annotation.Nullable;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.IHammerRotatable;
 import net.shadowmage.ancientwarfarerecompiled.core.item.ItemHammer;
 import net.shadowmage.ancientwarfarerecompiled.core.menu.ResearchStationMenu;
@@ -68,6 +72,15 @@ public class BlockResearchStation extends Block implements EntityBlock, IHammerR
 			ResearchStationMenu.open(serverPlayer, pos);
 		}
 		return InteractionResult.sidedSuccess(level.isClientSide);
+	}
+
+	@Override
+	@Nullable
+	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+		if (level.isClientSide) {
+			return null;
+		}
+		return type == AWCoreTileTypes.RESEARCH_STATION.get() ? (lvl, pos, st, tile) -> TileResearchStation.serverTick(lvl, pos, st, (TileResearchStation) tile) : null;
 	}
 
 	@Override
