@@ -14,6 +14,7 @@ import net.shadowmage.ancientwarfarerecompiled.core.config.AWCoreConfig;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreAttachments;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreBlocks;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreItems;
+import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreMenus;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTileTypes;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTabs;
 
@@ -35,6 +36,7 @@ public class AncientWarfareRecompiled {
 		AWCoreBlocks.register(modEventBus);
 		AWCoreTileTypes.register(modEventBus);
 		AWCoreAttachments.register(modEventBus);
+		AWCoreMenus.register(modEventBus);
 		AWCoreTabs.register(modEventBus);
 		modEventBus.addListener(CoreNetwork::register);
 
@@ -42,6 +44,6 @@ public class AncientWarfareRecompiled {
 	}
 
 	private void commonSetup(FMLCommonSetupEvent event) {
-		LOGGER.info("AncientWarfareRecompiled : phase 3 (stations, recherche, attachments) chargée");
+		LOGGER.info("AncientWarfareRecompiled : phase 4 (stations, interfaces, recherche, attachments) chargée");
 	}
 }

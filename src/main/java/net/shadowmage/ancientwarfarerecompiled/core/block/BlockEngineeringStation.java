@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.BlockHitResult;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.IHammerRotatable;
 import net.shadowmage.ancientwarfarerecompiled.core.item.ItemHammer;
+import net.shadowmage.ancientwarfarerecompiled.core.menu.EngineeringStationMenu;
 import net.shadowmage.ancientwarfarerecompiled.core.tile.TileEngineeringStation;
 
 /**
@@ -61,6 +62,9 @@ public class BlockEngineeringStation extends Block implements EntityBlock, IHamm
 			return InteractionResult.PASS;
 		}
 		// L'interface graphique sera ouverte ici lors du portage de la GUI.
+		if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+			EngineeringStationMenu.open(serverPlayer, pos);
+		}
 		return InteractionResult.sidedSuccess(level.isClientSide);
 	}
 

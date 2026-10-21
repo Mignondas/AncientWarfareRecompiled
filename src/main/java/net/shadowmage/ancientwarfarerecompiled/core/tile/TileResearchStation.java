@@ -8,6 +8,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.shadowmage.ancientwarfarerecompiled.core.block.BlockResearchStation;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTileTypes;
 
 /**
@@ -19,6 +22,7 @@ public class TileResearchStation extends BlockEntity {
 		@Override
 		protected void onContentsChanged(int slot) {
 			setChanged();
+			updateBookState();
 		}
 	};
 
@@ -36,6 +40,26 @@ public class TileResearchStation extends BlockEntity {
 	protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
 		super.loadAdditional(tag, registries);
 		bookSlot.deserializeNBT(registries, tag.getCompound("bookSlot"));
+	}
+
+	@Override
+	public void onLoad() {
+		super.onLoad();
+		updateBookState();
+	}
+
+	/**
+	 * Affiche le livre sur le modèle lorsqu'un objet est présent dans l'emplacement.
+	 */
+	private void updateBookState() {
+		if (level == null || level.isClientSide) {
+			return;
+		}
+		BlockState state = getBlockState();
+		boolean hasBook = !bookSlot.getStackInSlot(0).isEmpty();
+		if (state.hasProperty(BlockResearchStation.HAS_BOOK) && state.getValue(BlockResearchStation.HAS_BOOK) != hasBook) {
+			level.setBlock(worldPosition, state.setValue(BlockResearchStation.HAS_BOOK, hasBook), Block.UPDATE_ALL);
+		}
 	}
 
 	public void dropContents(Level level, BlockPos pos) {

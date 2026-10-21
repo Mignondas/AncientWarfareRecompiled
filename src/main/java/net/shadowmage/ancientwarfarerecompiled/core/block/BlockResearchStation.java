@@ -13,9 +13,11 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.IHammerRotatable;
 import net.shadowmage.ancientwarfarerecompiled.core.item.ItemHammer;
+import net.shadowmage.ancientwarfarerecompiled.core.menu.ResearchStationMenu;
 import net.shadowmage.ancientwarfarerecompiled.core.tile.TileResearchStation;
 
 /**
@@ -23,10 +25,11 @@ import net.shadowmage.ancientwarfarerecompiled.core.tile.TileResearchStation;
  */
 public class BlockResearchStation extends Block implements EntityBlock, IHammerRotatable {
 	public static final MapCodec<BlockResearchStation> CODEC = simpleCodec(BlockResearchStation::new);
+	public static final BooleanProperty HAS_BOOK = BooleanProperty.create("has_book");
 
 	public BlockResearchStation(Properties properties) {
 		super(properties);
-		registerDefaultState(stateDefinition.any().setValue(BlockStateProperties.HORIZONTAL_FACING, net.minecraft.core.Direction.NORTH));
+		registerDefaultState(stateDefinition.any().setValue(BlockStateProperties.HORIZONTAL_FACING, net.minecraft.core.Direction.NORTH).setValue(HAS_BOOK, false));
 	}
 
 	@Override
@@ -36,12 +39,12 @@ public class BlockResearchStation extends Block implements EntityBlock, IHammerR
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(BlockStateProperties.HORIZONTAL_FACING);
+		builder.add(BlockStateProperties.HORIZONTAL_FACING, HAS_BOOK);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
+		return defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite()).setValue(HAS_BOOK, false);
 	}
 
 	@Override
@@ -61,6 +64,9 @@ public class BlockResearchStation extends Block implements EntityBlock, IHammerR
 			return InteractionResult.PASS;
 		}
 		// L'interface graphique de recherche sera ouverte ici lors du portage de la GUI.
+		if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+			ResearchStationMenu.open(serverPlayer, pos);
+		}
 		return InteractionResult.sidedSuccess(level.isClientSide);
 	}
 
