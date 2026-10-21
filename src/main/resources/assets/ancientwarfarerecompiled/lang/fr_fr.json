@@ -9,5 +9,11 @@
   "item.ancientwarfarerecompiled.steel_bearings": "Roulements en acier",
   "item.ancientwarfarerecompiled.wooden_torque_shaft": "Arbre de transmission en bois",
   "item.ancientwarfarerecompiled.iron_torque_shaft": "Arbre de transmission en fer",
-  "item.ancientwarfarerecompiled.steel_torque_shaft": "Arbre de transmission en acier"
+  "item.ancientwarfarerecompiled.steel_torque_shaft": "Arbre de transmission en acier",
+  "item.ancientwarfarerecompiled.wooden_quill": "Plume en bois",
+  "item.ancientwarfarerecompiled.stone_quill": "Plume en pierre",
+  "item.ancientwarfarerecompiled.iron_quill": "Plume en fer",
+  "item.ancientwarfarerecompiled.gold_quill": "Plume en or",
+  "item.ancientwarfarerecompiled.diamond_quill": "Plume en diamant",
+  "guistrings.core.quill.work_mode": "Clic droit sur une station de recherche pour y transférer de l'énergie"
 }

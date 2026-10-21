@@ -5,6 +5,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
+import net.shadowmage.ancientwarfarerecompiled.core.item.AWToolMaterial;
+import net.shadowmage.ancientwarfarerecompiled.core.item.ItemQuill;
 
 /**
  * Objets du module Core.
@@ -21,6 +23,13 @@ public final class AWCoreItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientWarfareRecompiled.MODID);
 
 	public static final DeferredItem<Item> STEEL_INGOT = ITEMS.registerSimpleItem("steel_ingot");
+
+	/* plumes : une par matériau */
+	public static final DeferredItem<ItemQuill> WOODEN_QUILL = ITEMS.register("wooden_quill", () -> new ItemQuill(AWToolMaterial.WOOD));
+	public static final DeferredItem<ItemQuill> STONE_QUILL = ITEMS.register("stone_quill", () -> new ItemQuill(AWToolMaterial.STONE));
+	public static final DeferredItem<ItemQuill> IRON_QUILL = ITEMS.register("iron_quill", () -> new ItemQuill(AWToolMaterial.IRON));
+	public static final DeferredItem<ItemQuill> GOLD_QUILL = ITEMS.register("gold_quill", () -> new ItemQuill(AWToolMaterial.GOLD));
+	public static final DeferredItem<ItemQuill> DIAMOND_QUILL = ITEMS.register("diamond_quill", () -> new ItemQuill(AWToolMaterial.DIAMOND));
 
 	/* composants du module Automation (oredict de 1.12 : gearWood, gearIron, gearSteel, etc.) */
 	public static final DeferredItem<Item> WOODEN_GEAR_SET = ITEMS.registerSimpleItem("wooden_gear_set");

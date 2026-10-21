@@ -9,5 +9,11 @@
   "item.ancientwarfarerecompiled.steel_bearings": "Steel Bearings",
   "item.ancientwarfarerecompiled.wooden_torque_shaft": "Wooden Torque Shaft",
   "item.ancientwarfarerecompiled.iron_torque_shaft": "Iron Torque Shaft",
-  "item.ancientwarfarerecompiled.steel_torque_shaft": "Steel Torque Shaft"
+  "item.ancientwarfarerecompiled.steel_torque_shaft": "Steel Torque Shaft",
+  "item.ancientwarfarerecompiled.wooden_quill": "Wooden Quill",
+  "item.ancientwarfarerecompiled.stone_quill": "Stone Quill",
+  "item.ancientwarfarerecompiled.iron_quill": "Iron Quill",
+  "item.ancientwarfarerecompiled.gold_quill": "Gold Quill",
+  "item.ancientwarfarerecompiled.diamond_quill": "Diamond Quill",
+  "guistrings.core.quill.work_mode": "Right-click a research station to transfer energy to it"
 }
