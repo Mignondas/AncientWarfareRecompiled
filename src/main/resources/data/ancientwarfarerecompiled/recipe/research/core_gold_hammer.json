@@ -1,9 +1,10 @@
 {
+  "category": "misc",
   "research": "engineering",
   "result": {
-    "id": "ancientwarfarerecompiled:stone_hammer"
+    "id": "ancientwarfarerecompiled:gold_hammer"
   },
-  "type": "ancientwarfarerecompiled:research_recipe",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "MSM",
     " S ",
@@ -14,7 +15,7 @@
       "tag": "c:rods/wooden"
     },
     "M": {
-      "item": "minecraft:stone"
+      "tag": "c:ingots/gold"
     }
   }
 }

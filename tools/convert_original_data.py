@@ -7,7 +7,7 @@ Usage : python3 tools/convert_original_data.py <dossier assets/ancientwarfare> <
 Sorties (dans <dossier de sortie>) :
   recipe/            recettes de craft converties (chargées par le jeu)
   research/          objectifs de recherche convertis (chargés par le jeu)
-  research_recipes/  recettes de recherche converties (NON chargées tant que leur type Java n'existe pas)
+  recipe/research/   recettes de recherche : recettes de craft avec le champ "research" (verrouillées à l'établi)
   tags/item/         tags de l'objet du mod (engrenages, arbres, lingots d'acier)
   conversion_report.txt
 """
@@ -256,16 +256,11 @@ def convert_crafting(j, where):
 
 
 def convert_research_recipe(j, where):
+    """Recette de recherche -> recette de craft standard avec le champ "research" (verrouillée à l'établi)."""
     result = convert_result(j.get("result"), where)
     if result is None:
         return None
-    key = {}
-    for k, v in j.get("key", {}).items():
-        ing = convert_item(v, where)
-        if ing is None:
-            return None
-        key[k] = ing
-    base = {"research": j["research"], "result": result}
+    base = {"category": "misc", "research": j["research"], "result": result}
     if j["type"].endswith("shapeless_research_recipe"):
         ings = []
         for v in j.get("ingredients", []):
@@ -273,9 +268,15 @@ def convert_research_recipe(j, where):
             if ing is None:
                 return None
             ings.append(ing)
-        base.update({"type": f"{NS}:shapeless_research_recipe", "ingredients": ings})
+        base.update({"type": "minecraft:crafting_shapeless", "ingredients": ings})
     else:
-        base.update({"type": f"{NS}:research_recipe", "pattern": j["pattern"], "key": key})
+        key = {}
+        for k, v in j.get("key", {}).items():
+            ing = convert_item(v, where)
+            if ing is None:
+                return None
+            key[k] = ing
+        base.update({"type": "minecraft:crafting_shaped", "pattern": j["pattern"], "key": key})
     return base
 
 
@@ -335,7 +336,8 @@ for f in sorted(glob.glob(os.path.join(SRC, "research_recipes", "**", "*.json"),
     out = convert_research_recipe(j, where)
     if out is not None:
         sub = os.path.relpath(os.path.dirname(f), os.path.join(SRC, "research_recipes"))
-        write(os.path.join(OUT, "research_recipes", sub, name), out)
+        prefix = "" if sub == "." else sub.replace(os.sep, "_") + "_"
+        write(os.path.join(OUT, "recipe", "research", prefix + name), out)
         stats["research_recipe"] += 1
 
 for f in sorted(glob.glob(os.path.join(SRC, "registry", "research", "*.json"))):

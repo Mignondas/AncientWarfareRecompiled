@@ -45,6 +45,7 @@ public final class ResearchRegistry {
 		@SubscribeEvent
 		public static void addReloadListeners(AddReloadListenerEvent event) {
 			event.addListener(new Loader());
+			event.addListener(new ResearchRecipes.Loader());
 		}
 	}
 

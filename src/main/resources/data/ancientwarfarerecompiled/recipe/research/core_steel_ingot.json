@@ -1,9 +1,10 @@
 {
+  "category": "misc",
   "research": "refining",
   "result": {
     "id": "ancientwarfarerecompiled:steel_ingot"
   },
-  "type": "ancientwarfarerecompiled:research_recipe",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "C",
     "I"

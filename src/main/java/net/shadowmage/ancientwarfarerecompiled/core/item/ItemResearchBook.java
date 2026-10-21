@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
+import net.shadowmage.ancientwarfarerecompiled.core.research.client.ResearchBookScreen;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -42,10 +43,19 @@ public class ItemResearchBook extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 		ItemStack stack = player.getItemInHand(hand);
-		if (!level.isClientSide && getResearcherName(stack) == null) {
-			String name = player.getScoreboardName();
-			CustomData.update(DataComponents.CUSTOM_DATA, stack, tag -> tag.putString(RESEARCHER_TAG, name));
-			player.displayClientMessage(Component.translatable("guistrings.research.book_bound"), true);
+		String owner = getResearcherName(stack);
+		if (owner == null) {
+			if (!level.isClientSide) {
+				String name = player.getScoreboardName();
+				CustomData.update(DataComponents.CUSTOM_DATA, stack, tag -> tag.putString(RESEARCHER_TAG, name));
+				player.displayClientMessage(Component.translatable("guistrings.research.book_bound"), true);
+			}
+		} else if (!owner.equals(player.getScoreboardName())) {
+			if (!level.isClientSide) {
+				player.displayClientMessage(Component.translatable("guistrings.research.book_not_yours"), true);
+			}
+		} else if (level.isClientSide) {
+			ResearchBookScreen.open();
 		}
 		return InteractionResultHolder.success(stack);
 	}

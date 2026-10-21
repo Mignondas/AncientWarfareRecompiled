@@ -1,9 +1,10 @@
 {
+  "category": "misc",
   "research": "engineering",
   "result": {
-    "id": "ancientwarfarerecompiled:gold_quill"
+    "id": "ancientwarfarerecompiled:wooden_quill"
   },
-  "type": "ancientwarfarerecompiled:research_recipe",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "  F",
     " S ",
@@ -17,7 +18,7 @@
       "item": "minecraft:feather"
     },
     "M": {
-      "tag": "c:ingots/gold"
+      "tag": "minecraft:planks"
     }
   }
 }

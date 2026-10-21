@@ -44,7 +44,7 @@ public final class StationScreens {
 		public EngineeringStationScreen(EngineeringStationMenu menu, Inventory inventory, Component title) {
 			super(menu, inventory, title);
 			this.imageWidth = 176;
-			this.imageHeight = 192;
+			this.imageHeight = 218;
 		}
 
 		@Override

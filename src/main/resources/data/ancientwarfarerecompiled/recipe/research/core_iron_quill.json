@@ -1,9 +1,10 @@
 {
+  "category": "misc",
   "research": "engineering",
   "result": {
-    "id": "ancientwarfarerecompiled:stone_quill"
+    "id": "ancientwarfarerecompiled:iron_quill"
   },
-  "type": "ancientwarfarerecompiled:research_recipe",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "  F",
     " S ",
@@ -17,7 +18,7 @@
       "item": "minecraft:feather"
     },
     "M": {
-      "item": "minecraft:stone"
+      "tag": "c:ingots/iron"
     }
   }
 }

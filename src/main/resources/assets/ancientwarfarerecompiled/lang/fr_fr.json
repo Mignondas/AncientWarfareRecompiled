@@ -36,5 +36,11 @@
   "guistrings.research.researcher_name": "Chercheur",
   "guistrings.research.no_researcher": "Aucun",
   "guistrings.research.right_click_to_bind": "Clic droit pour le lier à vous",
-  "guistrings.research.book_bound": "Livre de recherche lié à vous"
+  "guistrings.research.book_bound": "Livre de recherche lié à vous",
+  "guistrings.research.book_title": "Livre de recherche",
+  "guistrings.research.available": "Disponibles",
+  "guistrings.research.queue": "File",
+  "guistrings.research.current": "En cours",
+  "guistrings.research.none": "aucune",
+  "guistrings.research.book_not_yours": "Ce livre appartient à un autre chercheur"
 }

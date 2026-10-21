@@ -36,5 +36,11 @@
   "guistrings.research.researcher_name": "Researcher",
   "guistrings.research.no_researcher": "None",
   "guistrings.research.right_click_to_bind": "Right-click to bind to yourself",
-  "guistrings.research.book_bound": "Research book bound to you"
+  "guistrings.research.book_bound": "Research book bound to you",
+  "guistrings.research.book_title": "Research Book",
+  "guistrings.research.available": "Available",
+  "guistrings.research.queue": "Queue",
+  "guistrings.research.current": "Current",
+  "guistrings.research.none": "none",
+  "guistrings.research.book_not_yours": "This book belongs to another researcher"
 }
