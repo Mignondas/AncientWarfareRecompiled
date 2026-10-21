@@ -1,0 +1,13 @@
+{
+  "itemGroup.ancientwarfarerecompiled": "AncientWarfareRecompiled",
+  "item.ancientwarfarerecompiled.steel_ingot": "Lingot d'acier",
+  "item.ancientwarfarerecompiled.wooden_gear_set": "Engrenages en bois",
+  "item.ancientwarfarerecompiled.iron_gear_set": "Engrenages en fer",
+  "item.ancientwarfarerecompiled.steel_gear_set": "Engrenages en acier",
+  "item.ancientwarfarerecompiled.wooden_bearings": "Roulements en bois",
+  "item.ancientwarfarerecompiled.iron_bearings": "Roulements en fer",
+  "item.ancientwarfarerecompiled.steel_bearings": "Roulements en acier",
+  "item.ancientwarfarerecompiled.wooden_torque_shaft": "Arbre de transmission en bois",
+  "item.ancientwarfarerecompiled.iron_torque_shaft": "Arbre de transmission en fer",
+  "item.ancientwarfarerecompiled.steel_torque_shaft": "Arbre de transmission en acier"
+}
