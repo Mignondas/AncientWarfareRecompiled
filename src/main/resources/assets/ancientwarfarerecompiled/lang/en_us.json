@@ -15,5 +15,19 @@
   "item.ancientwarfarerecompiled.iron_quill": "Iron Quill",
   "item.ancientwarfarerecompiled.gold_quill": "Gold Quill",
   "item.ancientwarfarerecompiled.diamond_quill": "Diamond Quill",
-  "guistrings.core.quill.work_mode": "Right-click a research station to transfer energy to it"
+  "guistrings.core.quill.work_mode": "Right-click a research station to transfer energy to it",
+  "item.ancientwarfarerecompiled.wooden_hammer": "Wooden Hammer",
+  "item.ancientwarfarerecompiled.stone_hammer": "Stone Hammer",
+  "item.ancientwarfarerecompiled.iron_hammer": "Iron Hammer",
+  "item.ancientwarfarerecompiled.gold_hammer": "Gold Hammer",
+  "item.ancientwarfarerecompiled.diamond_hammer": "Diamond Hammer",
+  "key.category.ancientwarfarerecompiled": "AncientWarfareRecompiled",
+  "key.ancientwarfarerecompiled.alt_item_use_1": "Alt. Item Function 1",
+  "key.ancientwarfarerecompiled.alt_item_use_2": "Alt. Item Function 2",
+  "key.ancientwarfarerecompiled.alt_item_use_3": "Alt. Item Function 3",
+  "key.ancientwarfarerecompiled.alt_item_use_4": "Alt. Item Function 4",
+  "key.ancientwarfarerecompiled.alt_item_use_5": "Alt. Item Function 5",
+  "guistrings.core.hammer.use_primary_item_key": "Press '%s' to toggle Work/Rotate Mode",
+  "guistrings.core.hammer.work_mode": "Use Item to Work at Worksite",
+  "guistrings.core.hammer.rotate_mode": "Use Item to Rotate blocks"
 }

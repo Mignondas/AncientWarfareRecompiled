@@ -9,6 +9,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.shadowmage.ancientwarfarerecompiled.core.network.CoreNetwork;
 import net.shadowmage.ancientwarfarerecompiled.core.config.AWCoreConfig;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreItems;
 import net.shadowmage.ancientwarfarerecompiled.core.init.AWCoreTabs;
@@ -29,11 +30,12 @@ public class AncientWarfareRecompiled {
 
 		AWCoreItems.register(modEventBus);
 		AWCoreTabs.register(modEventBus);
+		modEventBus.addListener(CoreNetwork::register);
 
 		modContainer.registerConfig(ModConfig.Type.COMMON, AWCoreConfig.SPEC);
 	}
 
 	private void commonSetup(FMLCommonSetupEvent event) {
-		LOGGER.info("AncientWarfareRecompiled : phase 1 (utilitaires Core et configuration) chargée");
+		LOGGER.info("AncientWarfareRecompiled : phase 2 (marteaux, touches alternatives, réseau) chargée");
 	}
 }

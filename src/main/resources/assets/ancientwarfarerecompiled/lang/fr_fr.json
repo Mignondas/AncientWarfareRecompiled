@@ -15,5 +15,19 @@
   "item.ancientwarfarerecompiled.iron_quill": "Plume en fer",
   "item.ancientwarfarerecompiled.gold_quill": "Plume en or",
   "item.ancientwarfarerecompiled.diamond_quill": "Plume en diamant",
-  "guistrings.core.quill.work_mode": "Clic droit sur une station de recherche pour y transférer de l'énergie"
+  "guistrings.core.quill.work_mode": "Clic droit sur une station de recherche pour y transférer de l'énergie",
+  "item.ancientwarfarerecompiled.wooden_hammer": "Marteau en bois",
+  "item.ancientwarfarerecompiled.stone_hammer": "Marteau en pierre",
+  "item.ancientwarfarerecompiled.iron_hammer": "Marteau en fer",
+  "item.ancientwarfarerecompiled.gold_hammer": "Marteau en or",
+  "item.ancientwarfarerecompiled.diamond_hammer": "Marteau en diamant",
+  "key.category.ancientwarfarerecompiled": "AncientWarfareRecompiled",
+  "key.ancientwarfarerecompiled.alt_item_use_1": "Fonction alternative d'objet 1",
+  "key.ancientwarfarerecompiled.alt_item_use_2": "Fonction alternative d'objet 2",
+  "key.ancientwarfarerecompiled.alt_item_use_3": "Fonction alternative d'objet 3",
+  "key.ancientwarfarerecompiled.alt_item_use_4": "Fonction alternative d'objet 4",
+  "key.ancientwarfarerecompiled.alt_item_use_5": "Fonction alternative d'objet 5",
+  "guistrings.core.hammer.use_primary_item_key": "Appuyez sur '%s' pour changer de mode",
+  "guistrings.core.hammer.work_mode": "Clic droit sur un chantier pour y transférer de l'énergie",
+  "guistrings.core.hammer.rotate_mode": "Clic droit sur un bloc pour le tourner"
 }

@@ -25,6 +25,11 @@ public final class AWCoreTabs {
 			.icon(() -> AWCoreItems.STEEL_INGOT.get().getDefaultInstance())
 			.displayItems((parameters, output) -> {
 				output.accept(AWCoreItems.STEEL_INGOT.get());
+				output.accept(AWCoreItems.WOODEN_HAMMER.get());
+				output.accept(AWCoreItems.STONE_HAMMER.get());
+				output.accept(AWCoreItems.IRON_HAMMER.get());
+				output.accept(AWCoreItems.GOLD_HAMMER.get());
+				output.accept(AWCoreItems.DIAMOND_HAMMER.get());
 				output.accept(AWCoreItems.WOODEN_QUILL.get());
 				output.accept(AWCoreItems.STONE_QUILL.get());
 				output.accept(AWCoreItems.IRON_QUILL.get());
