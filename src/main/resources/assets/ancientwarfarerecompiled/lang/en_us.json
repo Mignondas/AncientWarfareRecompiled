@@ -29,5 +29,7 @@
   "key.ancientwarfarerecompiled.alt_item_use_5": "Alt. Item Function 5",
   "guistrings.core.hammer.use_primary_item_key": "Press '%s' to toggle Work/Rotate Mode",
   "guistrings.core.hammer.work_mode": "Use Item to Work at Worksite",
-  "guistrings.core.hammer.rotate_mode": "Use Item to Rotate blocks"
+  "guistrings.core.hammer.rotate_mode": "Use Item to Rotate blocks",
+  "block.ancientwarfarerecompiled.engineering_station": "Engineering Station",
+  "block.ancientwarfarerecompiled.research_station": "Research Station"
 }

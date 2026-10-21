@@ -1,5 +1,6 @@
 package net.shadowmage.ancientwarfarerecompiled.core.init;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -22,6 +23,10 @@ public final class AWCoreItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AncientWarfareRecompiled.MODID);
 
 	public static final DeferredItem<Item> STEEL_INGOT = ITEMS.registerSimpleItem("steel_ingot");
+
+	/* blocs du module Core */
+	public static final DeferredItem<BlockItem> ENGINEERING_STATION_ITEM = ITEMS.registerSimpleBlockItem("engineering_station", AWCoreBlocks.ENGINEERING_STATION);
+	public static final DeferredItem<BlockItem> RESEARCH_STATION_ITEM = ITEMS.registerSimpleBlockItem("research_station", AWCoreBlocks.RESEARCH_STATION);
 
 	/* marteaux : un par matériau */
 	public static final DeferredItem<ItemHammer> WOODEN_HAMMER = ITEMS.register("wooden_hammer", () -> new ItemHammer(AWToolMaterial.WOOD));

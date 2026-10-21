@@ -25,6 +25,8 @@ public final class AWCoreTabs {
 			.icon(() -> AWCoreItems.STEEL_INGOT.get().getDefaultInstance())
 			.displayItems((parameters, output) -> {
 				output.accept(AWCoreItems.STEEL_INGOT.get());
+				output.accept(AWCoreItems.ENGINEERING_STATION_ITEM.get());
+				output.accept(AWCoreItems.RESEARCH_STATION_ITEM.get());
 				output.accept(AWCoreItems.WOODEN_HAMMER.get());
 				output.accept(AWCoreItems.STONE_HAMMER.get());
 				output.accept(AWCoreItems.IRON_HAMMER.get());
