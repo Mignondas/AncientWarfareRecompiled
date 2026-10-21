@@ -1,0 +1,78 @@
+{
+  "name": "machinery",
+  "time": 200,
+  "dependencies": [
+    "theory_of_gravity"
+  ],
+  "resources": [
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "c:ingots/iron"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:bearings/iron"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:bearings/iron"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "research": "engineering",
+  "result": {
+    "id": "ancientwarfarerecompiled:wooden_hammer"
+  },
+  "type": "ancientwarfarerecompiled:research_recipe",
+  "pattern": [
+    "MSM",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "M": {
+      "tag": "minecraft:planks"
+    }
+  }
+}

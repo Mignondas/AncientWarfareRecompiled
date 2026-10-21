@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    " P ",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    }
+  },
+  "result": {
+    "id": "ancientwarfarerecompiled:steel_torque_shaft"
+  }
+}

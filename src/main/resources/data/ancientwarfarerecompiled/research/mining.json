@@ -1,0 +1,36 @@
+{
+  "name": "mining",
+  "time": 200,
+  "dependencies": [
+    "engineering"
+  ],
+  "resources": [
+    {
+      "item": "minecraft:iron_pickaxe"
+    },
+    {
+      "item": "minecraft:furnace_minecart"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:golden_rail"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ]
+}

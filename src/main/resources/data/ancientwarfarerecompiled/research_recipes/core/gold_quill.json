@@ -1,0 +1,23 @@
+{
+  "research": "engineering",
+  "result": {
+    "id": "ancientwarfarerecompiled:gold_quill"
+  },
+  "type": "ancientwarfarerecompiled:research_recipe",
+  "pattern": [
+    "  F",
+    " S ",
+    "M  "
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "M": {
+      "tag": "c:ingots/gold"
+    }
+  }
+}

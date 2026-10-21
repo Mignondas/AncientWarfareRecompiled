@@ -1,0 +1,82 @@
+{
+  "name": "mass_production",
+  "time": 200,
+  "dependencies": [
+    "refining",
+    "machinery"
+  ],
+  "resources": [
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:ingots/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:bearings/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:bearings/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:bearings/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:shafts/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:shafts/steel"
+    },
+    {
+      "tag": "ancientwarfarerecompiled:shafts/steel"
+    }
+  ]
+}

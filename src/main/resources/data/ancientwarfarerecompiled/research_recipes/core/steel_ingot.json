@@ -1,0 +1,19 @@
+{
+  "research": "refining",
+  "result": {
+    "id": "ancientwarfarerecompiled:steel_ingot"
+  },
+  "type": "ancientwarfarerecompiled:research_recipe",
+  "pattern": [
+    "C",
+    "I"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    }
+  }
+}

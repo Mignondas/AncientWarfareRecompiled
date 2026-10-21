@@ -1,0 +1,20 @@
+{
+  "research": "engineering",
+  "result": {
+    "id": "ancientwarfarerecompiled:iron_hammer"
+  },
+  "type": "ancientwarfarerecompiled:research_recipe",
+  "pattern": [
+    "MSM",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "M": {
+      "tag": "c:ingots/iron"
+    }
+  }
+}
