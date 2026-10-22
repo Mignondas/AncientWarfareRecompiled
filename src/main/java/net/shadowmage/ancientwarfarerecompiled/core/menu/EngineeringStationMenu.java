@@ -101,11 +101,11 @@ public class EngineeringStationMenu extends AbstractContainerMenu {
 		if (level.isClientSide) {
 			return;
 		}
-		CraftingInput input = grid.asCraftingInput();
+		CraftingInput input = CraftingInput.of(3, 3, grid.getItems());
 		ItemStack out = ItemStack.EMPTY;
 		Optional<RecipeHolder<CraftingRecipe>> holder = level.getRecipeManager().getRecipeFor(RecipeType.CRAFTING, input, level);
 		if (holder.isPresent()) {
-			Optional<String> needed = ResearchRecipes.getRequiredResearch(holder.get().id().location());
+			Optional<String> needed = ResearchRecipes.getRequiredResearch(holder.get().id());
 			if (needed.isEmpty() || hasResearched(needed.get())) {
 				out = holder.get().value().assemble(input, level.registryAccess());
 			}
