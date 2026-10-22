@@ -189,15 +189,19 @@ def element_for(name, faces, verts, uvs, width, height, dy):
 
 
 def main():
-    if len(sys.argv) not in (7, 8):
+    if len(sys.argv) not in (7, 8, 9):
         sys.exit(__doc__)
     obj, width, height, dy, texture_id, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), float(sys.argv[4]), sys.argv[5], sys.argv[6]
     verts, uvs, groups = parse(obj)
-    if len(sys.argv) == 8:
-        # Tourne la géométrie autour de l'axe avant-arrière (Z), centre du bloc (0.5, 0.5). Angle en degrés.
+    if len(sys.argv) >= 8:
+        # Rotation autour de Z (axe avant-arrière), puis optionnellement autour de Y (axe vertical). Centre (0.5, 0.5, 0.5).
         a = math.radians(float(sys.argv[7]))
         c, si = math.cos(a), math.sin(a)
         verts = [(0.5 + (x - 0.5) * c - (y - 0.5) * si, 0.5 + (x - 0.5) * si + (y - 0.5) * c, z) for x, y, z in verts]
+    if len(sys.argv) == 9:
+        b = math.radians(float(sys.argv[8]))
+        c, si = math.cos(b), math.sin(b)
+        verts = [(0.5 + (x - 0.5) * c + (z - 0.5) * si, y, 0.5 - (x - 0.5) * si + (z - 0.5) * c) for x, y, z in verts]
     elements = [element_for(name, faces, verts, uvs, width, height, dy) for name, faces in groups.items() if faces]
     model = {
         "elements": elements,
