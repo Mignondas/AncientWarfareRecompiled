@@ -1,4 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
-  "textures": { "all": "ancientwarfarerecompiled:block/hand_cranked_generator" }
+  "texture_size": [128, 128],
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "uv": [0, 0, 120, 45], "texture": "#all" },
+        "south": { "uv": [0, 0, 120, 45], "texture": "#all" },
+        "west": { "uv": [0, 0, 120, 45], "texture": "#all" },
+        "east": { "uv": [0, 0, 120, 45], "texture": "#all" },
+        "up": { "uv": [0, 0, 120, 45], "texture": "#all" },
+        "down": { "uv": [0, 0, 120, 45], "texture": "#all" }
+      }
+    }
+  ],
+  "textures": { "all": "ancientwarfarerecompiled:block/hand_cranked_generator", "particle": "ancientwarfarerecompiled:block/hand_cranked_generator" }
 }
