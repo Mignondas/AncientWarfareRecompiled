@@ -40,6 +40,7 @@ public final class StationScreens {
 		event.register(AWCoreMenus.RESEARCH_STATION.get(), ResearchStationScreen::new);
 		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.CHUNK_LOADER_DELUXE.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.ChunkLoaderDeluxeScreen::new);
 		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.MAILBOX.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.MailboxScreen::new);
+		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.STIRLING_GENERATOR.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.StirlingGeneratorScreen::new);
 		event.register(AWCoreMenus.RESEARCH_BOOK.get(), net.shadowmage.ancientwarfarerecompiled.core.research.client.ResearchBookScreen::new);
 	}
 

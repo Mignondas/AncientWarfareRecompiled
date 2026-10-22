@@ -9,6 +9,7 @@ import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileChunkLoaderDeluxe;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileMailbox;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileHandCrankedGenerator;
+import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileStirlingGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileTorqueShaft;
 
 /**
@@ -35,6 +36,10 @@ public final class AWAutomationTileTypes {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileHandCrankedGenerator>> HAND_CRANKED_GENERATOR =
 			BLOCK_ENTITY_TYPES.register("hand_cranked_generator_tile",
 					() -> BlockEntityType.Builder.of(TileHandCrankedGenerator::new, AWAutomationBlocks.HAND_CRANKED_GENERATOR.get()).build(null));
+
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileStirlingGenerator>> STIRLING_GENERATOR =
+			BLOCK_ENTITY_TYPES.register("stirling_generator_tile",
+					() -> BlockEntityType.Builder.of(TileStirlingGenerator::new, AWAutomationBlocks.STIRLING_GENERATOR.get()).build(null));
 
 	public static void register(IEventBus modEventBus) {
 		BLOCK_ENTITY_TYPES.register(modEventBus);

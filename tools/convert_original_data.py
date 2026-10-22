@@ -21,6 +21,7 @@ PORTED = {
     "ancientwarfareautomation:chunk_loader_deluxe": f"{NS}:chunk_loader_deluxe",
     "ancientwarfareautomation:mailbox": f"{NS}:mailbox",
     "ancientwarfareautomation:hand_cranked_generator": f"{NS}:hand_cranked_generator",
+    "ancientwarfareautomation:stirling_generator": f"{NS}:stirling_generator",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)

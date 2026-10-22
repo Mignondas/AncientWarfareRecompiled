@@ -1,6 +1,6 @@
-Résumé : recipe=12, research=30, research_recipe=18, tags=10
+Résumé : recipe=12, research=30, research_recipe=19, tags=10
 
-Ignorés (290) :
+Ignorés (289) :
   - recipes/core/manual.json: résultat non porté ancientwarfare:manual
   - recipes/npc/diamond_halberd.json: résultat non porté ancientwarfarenpc:diamond_halberd
   - recipes/npc/diamond_lance.json: résultat non porté ancientwarfarenpc:diamond_lance
@@ -34,7 +34,6 @@ Ignorés (290) :
   - research_recipes/automation/torque/flywheel_storage_heavy.json: résultat non porté ancientwarfareautomation:flywheel_storage
   - research_recipes/automation/torque/flywheel_storage_light.json: résultat non porté ancientwarfareautomation:flywheel_storage
   - research_recipes/automation/torque/flywheel_storage_medium.json: résultat non porté ancientwarfareautomation:flywheel_storage
-  - research_recipes/automation/torque/stirling_generator.json: résultat non porté ancientwarfareautomation:stirling_generator
   - research_recipes/automation/torque/torque_distributor_heavy.json: résultat non porté ancientwarfareautomation:torque_distributor
   - research_recipes/automation/torque/torque_distributor_light.json: résultat non porté ancientwarfareautomation:torque_distributor
   - research_recipes/automation/torque/torque_distributor_medium.json: résultat non porté ancientwarfareautomation:torque_distributor

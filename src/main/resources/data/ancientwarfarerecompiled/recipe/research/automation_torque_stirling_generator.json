@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "machinery",
+  "result": {
+    "id": "ancientwarfarerecompiled:stirling_generator"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "GGG",
+    "IGI"
+  ],
+  "key": {
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    }
+  }
+}

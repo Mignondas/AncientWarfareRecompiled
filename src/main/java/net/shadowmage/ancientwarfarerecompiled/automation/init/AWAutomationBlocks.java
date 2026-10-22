@@ -11,6 +11,7 @@ import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockChunkLoader
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockChunkLoaderSimple;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockMailbox;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockHandCrankedGenerator;
+import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockStirlingGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueShaft;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.TorqueTier;
 
@@ -46,6 +47,9 @@ public final class AWAutomationBlocks {
 	public static final DeferredBlock<BlockHandCrankedGenerator> HAND_CRANKED_GENERATOR = BLOCKS.registerBlock("hand_cranked_generator",
 			BlockHandCrankedGenerator::new,
 			BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f).sound(SoundType.WOOD).noOcclusion());
+	public static final DeferredBlock<BlockStirlingGenerator> STIRLING_GENERATOR = BLOCKS.registerBlock("stirling_generator",
+			BlockStirlingGenerator::new,
+			BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion());
 
 	public static void register(IEventBus modEventBus) {
 		BLOCKS.register(modEventBus);

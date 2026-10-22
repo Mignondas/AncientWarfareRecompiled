@@ -88,5 +88,6 @@
   "block.ancientwarfarerecompiled.torque_shaft_medium": "Medium Torque Shaft",
   "block.ancientwarfarerecompiled.torque_shaft_heavy": "Heavy Torque Shaft",
   "block.ancientwarfarerecompiled.hand_cranked_generator": "Hand-Cranked Generator",
+  "block.ancientwarfarerecompiled.stirling_generator": "Stirling Generator",
   "guistrings.automation.torque.values": "Torque: %1$s, in: %2$s, out: %3$s, loss: %4$s"
 }

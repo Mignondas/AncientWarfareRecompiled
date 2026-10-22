@@ -14,5 +14,7 @@ public final class AWAutomationCapabilities {
 	public static void register(RegisterCapabilitiesEvent event) {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AWAutomationTileTypes.MAILBOX.get(),
 				(be, side) -> side == Direction.UP ? be.sendInventory : side == Direction.DOWN ? be.receivedInventory : null);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AWAutomationTileTypes.STIRLING_GENERATOR.get(),
+				(be, side) -> be.fuelHandler);
 	}
 }
