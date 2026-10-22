@@ -11,7 +11,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
-import net.shadowmage.ancientwarfarerecompiled.core.research.client.ResearchBookScreen;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.SimpleMenuProvider;
+import net.shadowmage.ancientwarfarerecompiled.core.menu.ResearchBookMenu;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -54,8 +56,9 @@ public class ItemResearchBook extends Item {
 			if (!level.isClientSide) {
 				player.displayClientMessage(Component.translatable("guistrings.research.book_not_yours"), true);
 			}
-		} else if (level.isClientSide) {
-			ResearchBookScreen.open();
+		} else if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
+			serverPlayer.openMenu(new SimpleMenuProvider((id, inv, p) -> new ResearchBookMenu(id, inv),
+					Component.translatable("guistrings.research.book_title")));
 		}
 		return InteractionResultHolder.success(stack);
 	}
