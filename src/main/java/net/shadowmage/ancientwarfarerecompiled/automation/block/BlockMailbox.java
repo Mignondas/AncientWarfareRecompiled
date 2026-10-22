@@ -109,7 +109,8 @@ public class BlockMailbox extends Block implements EntityBlock, IHammerRotatable
 	@Override
 	public boolean rotateBlock(Level level, BlockPos pos, Direction side) {
 		BlockState state = level.getBlockState(pos);
-		level.setBlock(pos, state.setValue(BlockStateProperties.HORIZONTAL_FACING, state.getValue(BlockStateProperties.HORIZONTAL_FACING).getClockwise()), Block.UPDATE_ALL);
+		Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+		level.setBlock(pos, state.setValue(BlockStateProperties.HORIZONTAL_FACING, TorqueRotation.rotateAround(facing, Direction.Axis.Y)), Block.UPDATE_ALL);
 		return true;
 	}
 }

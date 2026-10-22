@@ -88,7 +88,7 @@ public class BlockHandCrankedGenerator extends Block implements EntityBlock, IHa
 	public boolean rotateBlock(Level level, BlockPos pos, Direction side) {
 		BlockState state = level.getBlockState(pos);
 		Direction facing = state.getValue(BlockStateProperties.FACING);
-		Direction rotated = facing.getAxis() == side.getAxis() ? facing : facing.getClockwise(side.getAxis());
+		Direction rotated = TorqueRotation.rotateAround(facing, side.getAxis());
 		if (rotated == facing) {
 			return false;
 		}

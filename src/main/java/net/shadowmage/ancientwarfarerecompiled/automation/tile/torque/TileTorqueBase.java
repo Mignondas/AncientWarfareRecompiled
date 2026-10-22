@@ -59,6 +59,12 @@ public abstract class TileTorqueBase extends BlockEntity implements ITorqueTile 
 		return cell.getEnergy() - e;
 	}
 
+	/** Pas de rendu animé pour l'instant : la rotation client est toujours nulle. */
+	@Override
+	public float getClientOutputRotation(Direction from, float delta) {
+		return 0;
+	}
+
 	/** Énergie totale stockée, pour l'affichage. */
 	protected abstract double getTotalTorque();
 
