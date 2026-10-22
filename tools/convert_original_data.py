@@ -16,7 +16,10 @@ import json, glob, os, sys, collections
 SRC, OUT = sys.argv[1], sys.argv[2]
 NS = "ancientwarfarerecompiled"
 # Objets d'autres modules déjà portés : identifiant d'origine -> identifiant recompilé
-PORTED = {"ancientwarfareautomation:chunk_loader_simple": f"{NS}:chunk_loader_simple"}
+PORTED = {
+    "ancientwarfareautomation:chunk_loader_simple": f"{NS}:chunk_loader_simple",
+    "ancientwarfareautomation:chunk_loader_deluxe": f"{NS}:chunk_loader_deluxe",
+}
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)
 AW_ITEMS = {

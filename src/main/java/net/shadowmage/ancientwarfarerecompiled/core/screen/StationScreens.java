@@ -38,6 +38,7 @@ public final class StationScreens {
 	public static void register(RegisterMenuScreensEvent event) {
 		event.register(AWCoreMenus.ENGINEERING_STATION.get(), EngineeringStationScreen::new);
 		event.register(AWCoreMenus.RESEARCH_STATION.get(), ResearchStationScreen::new);
+		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.CHUNK_LOADER_DELUXE.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.ChunkLoaderDeluxeScreen::new);
 		event.register(AWCoreMenus.RESEARCH_BOOK.get(), net.shadowmage.ancientwarfarerecompiled.core.research.client.ResearchBookScreen::new);
 	}
 

@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "machinery",
+  "result": {
+    "id": "ancientwarfarerecompiled:chunk_loader_deluxe"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BEB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:obsidian"
+    },
+    "E": {
+      "tag": "c:ender_pearls"
+    }
+  }
+}

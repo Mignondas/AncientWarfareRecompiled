@@ -1,6 +1,6 @@
-Résumé : recipe=12, research=30, research_recipe=12, tags=10
+Résumé : recipe=12, research=30, research_recipe=13, tags=10
 
-Ignorés (296) :
+Ignorés (295) :
   - recipes/core/manual.json: résultat non porté ancientwarfare:manual
   - recipes/npc/diamond_halberd.json: résultat non porté ancientwarfarenpc:diamond_halberd
   - recipes/npc/diamond_lance.json: résultat non porté ancientwarfarenpc:diamond_lance
@@ -28,7 +28,6 @@ Ignorés (296) :
   - recipes/structure/totem_part_mid.json: résultat non porté ancientwarfarestructure:totem_part
   - recipes/structure/totem_part_mid_alt.json: résultat non porté ancientwarfarestructure:totem_part
   - recipes/structure/totem_part_top.json: résultat non porté ancientwarfarestructure:totem_part
-  - research_recipes/automation/chunk_loader_deluxe.json: résultat non porté ancientwarfareautomation:chunk_loader_deluxe
   - research_recipes/automation/mailbox.json: résultat non porté ancientwarfareautomation:mailbox
   - research_recipes/automation/torque/flywheel_controller_heavy.json: résultat non porté ancientwarfareautomation:flywheel_controller
   - research_recipes/automation/torque/flywheel_controller_light.json: résultat non porté ancientwarfareautomation:flywheel_controller

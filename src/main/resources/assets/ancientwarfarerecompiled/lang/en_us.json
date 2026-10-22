@@ -74,5 +74,6 @@
   "research.advanced_siege_warfare": "Advanced Siege Warfare",
   "research.ballistics": "Ballistics",
   "research.rocketry": "Rocketry",
-  "block.ancientwarfarerecompiled.chunk_loader_simple": "Simple Chunk Loader"
+  "block.ancientwarfarerecompiled.chunk_loader_simple": "Simple Chunk Loader",
+  "block.ancientwarfarerecompiled.chunk_loader_deluxe": "Deluxe Chunk Loader"
 }
