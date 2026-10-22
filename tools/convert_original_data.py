@@ -15,6 +15,8 @@ import json, glob, os, sys, collections
 
 SRC, OUT = sys.argv[1], sys.argv[2]
 NS = "ancientwarfarerecompiled"
+# Objets d'autres modules déjà portés : identifiant d'origine -> identifiant recompilé
+PORTED = {"ancientwarfareautomation:chunk_loader_simple": f"{NS}:chunk_loader_simple"}
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)
 AW_ITEMS = {
@@ -188,6 +190,7 @@ def ingredient_from_id(ident, where):
         elif not ident.startswith(("#c:", "#minecraft:", f"#{NS}:")):
             report["skip"].append(f"{where}: tag inconnu {ident}")
             return None
+    ident = PORTED.get(ident, ident)
     if ident in AW_ITEMS:
         ident = AW_ITEMS[ident]
     elif ident.startswith("ancientwarfare:") or ident.startswith("ancientwarfarevehicle:") or ident.startswith("ancientwarfareautomation:") or ident.startswith("ancientwarfarenpc:") or ident.startswith("ancientwarfarestructure:"):
@@ -213,6 +216,7 @@ def convert_result(res, where):
             return None
         ident = f"{NS}:{COMPONENT[idx]}"
         res = {"item": ident, "count": res.get("count", 1)}
+    ident = PORTED.get(ident, ident)
     if ident in AW_ITEMS:
         ident = AW_ITEMS[ident]
     elif ident.startswith("minecraft:") and resolve_vanilla(ident, res.get("data", 0)):

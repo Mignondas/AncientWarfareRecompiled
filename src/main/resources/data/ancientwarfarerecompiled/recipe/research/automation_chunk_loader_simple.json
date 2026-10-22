@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "mathematics",
+  "result": {
+    "id": "ancientwarfarerecompiled:chunk_loader_simple"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BEB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:stonebrick"
+    },
+    "E": {
+      "tag": "c:ender_pearls"
+    }
+  }
+}

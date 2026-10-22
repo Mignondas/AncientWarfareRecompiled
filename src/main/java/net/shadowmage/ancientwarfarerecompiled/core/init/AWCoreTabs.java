@@ -28,6 +28,7 @@ public final class AWCoreTabs {
 				output.accept(AWCoreItems.ENGINEERING_STATION_ITEM.get());
 				output.accept(AWCoreItems.RESEARCH_BOOK.get());
 				output.accept(AWCoreItems.RESEARCH_STATION_ITEM.get());
+				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.CHUNK_LOADER_SIMPLE_ITEM.get());
 				output.accept(AWCoreItems.WOODEN_HAMMER.get());
 				output.accept(AWCoreItems.STONE_HAMMER.get());
 				output.accept(AWCoreItems.IRON_HAMMER.get());

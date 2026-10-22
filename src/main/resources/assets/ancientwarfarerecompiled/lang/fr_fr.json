@@ -73,5 +73,6 @@
   "research.naval_warfare": "Guerre navale",
   "research.advanced_siege_warfare": "Guerre de siège avancée",
   "research.ballistics": "Ballistics",
-  "research.rocketry": "Rocketry"
+  "research.rocketry": "Rocketry",
+  "block.ancientwarfarerecompiled.chunk_loader_simple": "Chargeur de parcelle simple"
 }

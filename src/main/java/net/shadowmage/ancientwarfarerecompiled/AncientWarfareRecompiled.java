@@ -38,6 +38,8 @@ public class AncientWarfareRecompiled {
 		AWCoreAttachments.register(modEventBus);
 		AWCoreMenus.register(modEventBus);
 		AWCoreTabs.register(modEventBus);
+		net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationBlocks.register(modEventBus);
+		net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.register(modEventBus);
 		modEventBus.addListener(CoreNetwork::register);
 
 		modContainer.registerConfig(ModConfig.Type.COMMON, AWCoreConfig.SPEC);
