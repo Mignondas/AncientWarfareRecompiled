@@ -92,5 +92,8 @@
   "block.ancientwarfarerecompiled.torque_distributor_light": "Light Torque Distributor",
   "block.ancientwarfarerecompiled.torque_distributor_medium": "Medium Torque Distributor",
   "block.ancientwarfarerecompiled.torque_distributor_heavy": "Heavy Torque Distributor",
+  "block.ancientwarfarerecompiled.torque_junction_light": "Light Torque Junction",
+  "block.ancientwarfarerecompiled.torque_junction_medium": "Medium Torque Junction",
+  "block.ancientwarfarerecompiled.torque_junction_heavy": "Heavy Torque Junction",
   "guistrings.automation.torque.values": "Torque: %1$s, in: %2$s, out: %3$s, loss: %4$s"
 }

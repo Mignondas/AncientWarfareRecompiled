@@ -25,6 +25,9 @@ PORTED = {
     "ancientwarfareautomation:torque_distributor_light": f"{NS}:torque_distributor_light",
     "ancientwarfareautomation:torque_distributor_medium": f"{NS}:torque_distributor_medium",
     "ancientwarfareautomation:torque_distributor_heavy": f"{NS}:torque_distributor_heavy",
+    "ancientwarfareautomation:torque_junction_light": f"{NS}:torque_junction_light",
+    "ancientwarfareautomation:torque_junction_medium": f"{NS}:torque_junction_medium",
+    "ancientwarfareautomation:torque_junction_heavy": f"{NS}:torque_junction_heavy",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)
@@ -232,6 +235,14 @@ def convert_result(res, where):
         ident = f"{NS}:torque_shaft_{tiers[idx]}"
         res = {"item": ident, "count": res.get("count", 1)}
     # Distributeurs de couple : même principe, léger / moyen / lourd selon la métadonnée
+    if ident == "ancientwarfareautomation:torque_junction":
+        tiers = ["light", "medium", "heavy"]
+        idx = res.get("data", 0)
+        if not (0 <= idx < len(tiers)):
+            report["skip"].append(f"{where}: jonction inconnue {idx}")
+            return None
+        ident = f"{NS}:torque_junction_{tiers[idx]}"
+        res = {"item": ident, "count": res.get("count", 1)}
     if ident == "ancientwarfareautomation:torque_distributor":
         tiers = ["light", "medium", "heavy"]
         idx = res.get("data", 0)

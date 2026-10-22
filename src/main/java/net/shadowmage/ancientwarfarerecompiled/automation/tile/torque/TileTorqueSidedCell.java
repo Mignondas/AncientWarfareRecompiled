@@ -43,9 +43,35 @@ public abstract class TileTorqueSidedCell extends TileTorqueBase {
 		return loss;
 	}
 
-	protected abstract double transferPower();
+	/** Par défaut (jonction) : la sortie est la face FACING, les autres faces lui envoient leur couple. */
+	protected double transferPower() {
+		return transferPowerTo(getPrimaryFacing());
+	}
 
-	protected abstract void balanceStorage();
+	protected void balanceStorage() {
+		int face = getPrimaryFacing().ordinal();
+		SidedTorqueCell out = storage[face];
+		double total = 0;
+		for (int i = 0; i < storage.length; i++) {
+			if (i != face) {
+				total += storage[i].getEnergy();
+			}
+		}
+		if (total > 0) {
+			double transfer = Math.min(total, out.getMaxEnergy() - out.getEnergy());
+			double percent = transfer / total;
+			double moved = 0;
+			for (int i = 0; i < storage.length; i++) {
+				if (i == face) {
+					continue;
+				}
+				double fromEach = storage[i].getEnergy() * percent;
+				moved += fromEach;
+				storage[i].setEnergy(storage[i].getEnergy() - fromEach);
+			}
+			out.setEnergy(out.getEnergy() + moved);
+		}
+	}
 
 	/** Faces connectées à un voisin qui peut recevoir ou fournir du couple dans le bon sens. */
 	protected boolean[] getConnections() {
