@@ -9,6 +9,9 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -51,6 +54,29 @@ public class BlockTorqueShaft extends Block implements EntityBlock, IHammerRotat
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(BlockStateProperties.FACING);
+	}
+
+	/** Barre de 0,5 bloc de section, orientée selon la face de sortie. */
+	private static final VoxelShape SHAPE_Z = box(4, 4, 0, 12, 12, 16);
+	private static final VoxelShape SHAPE_X = box(0, 4, 4, 16, 12, 12);
+	private static final VoxelShape SHAPE_Y = box(4, 0, 4, 12, 16, 12);
+
+	private static VoxelShape shapeFor(Direction facing) {
+		return switch (facing.getAxis()) {
+			case X -> SHAPE_X;
+			case Y -> SHAPE_Y;
+			default -> SHAPE_Z;
+		};
+	}
+
+	@Override
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+		return shapeFor(state.getValue(BlockStateProperties.FACING));
+	}
+
+	@Override
+	protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+		return shapeFor(state.getValue(BlockStateProperties.FACING));
 	}
 
 	@Override
