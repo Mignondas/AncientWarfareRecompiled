@@ -117,7 +117,7 @@ public class ResearchBookScreen extends AbstractContainerScreen<ResearchBookMenu
 	}
 
 	private static Component goalText(String name) {
-		String key = "research.ancientwarfarerecompiled." + name;
+		String key = "research." + name;
 		return I18n.exists(key) ? Component.translatable(key) : Component.literal(name);
 	}
 
