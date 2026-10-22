@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "y": 0 },
+    "facing=south": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "y": 180 },
+    "facing=west": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "y": 270 },
+    "facing=east": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "y": 90 },
+    "facing=up": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "x": 270 },
+    "facing=down": { "model": "ancientwarfarerecompiled:block/torque_distributor_medium", "x": 90 }
+  }
+}

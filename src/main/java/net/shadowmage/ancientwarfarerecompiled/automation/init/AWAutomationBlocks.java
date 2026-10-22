@@ -12,6 +12,7 @@ import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockChunkLoader
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockMailbox;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockHandCrankedGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockStirlingGenerator;
+import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueDistributor;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueShaft;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.TorqueTier;
 
@@ -50,6 +51,16 @@ public final class AWAutomationBlocks {
 	public static final DeferredBlock<BlockStirlingGenerator> STIRLING_GENERATOR = BLOCKS.registerBlock("stirling_generator",
 			BlockStirlingGenerator::new,
 			BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion());
+
+	public static final DeferredBlock<BlockTorqueDistributor> TORQUE_DISTRIBUTOR_LIGHT = BLOCKS.registerBlock("torque_distributor_light",
+			p -> new BlockTorqueDistributor(p, TorqueTier.LIGHT),
+			BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0f).sound(SoundType.METAL).noOcclusion());
+	public static final DeferredBlock<BlockTorqueDistributor> TORQUE_DISTRIBUTOR_MEDIUM = BLOCKS.registerBlock("torque_distributor_medium",
+			p -> new BlockTorqueDistributor(p, TorqueTier.MEDIUM),
+			BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0f).sound(SoundType.METAL).noOcclusion());
+	public static final DeferredBlock<BlockTorqueDistributor> TORQUE_DISTRIBUTOR_HEAVY = BLOCKS.registerBlock("torque_distributor_heavy",
+			p -> new BlockTorqueDistributor(p, TorqueTier.HEAVY),
+			BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(4.0f).sound(SoundType.METAL).noOcclusion());
 
 	public static void register(IEventBus modEventBus) {
 		BLOCKS.register(modEventBus);

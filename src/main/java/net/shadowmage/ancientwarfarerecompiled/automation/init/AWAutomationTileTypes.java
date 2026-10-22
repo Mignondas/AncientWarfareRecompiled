@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileChunkLoaderDeluxe;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileMailbox;
+import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileDistributor;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileHandCrankedGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileStirlingGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileTorqueShaft;
@@ -40,6 +41,11 @@ public final class AWAutomationTileTypes {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileStirlingGenerator>> STIRLING_GENERATOR =
 			BLOCK_ENTITY_TYPES.register("stirling_generator_tile",
 					() -> BlockEntityType.Builder.of(TileStirlingGenerator::new, AWAutomationBlocks.STIRLING_GENERATOR.get()).build(null));
+
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileDistributor>> TORQUE_DISTRIBUTOR =
+			BLOCK_ENTITY_TYPES.register("torque_distributor_tile",
+					() -> BlockEntityType.Builder.of(TileDistributor::new,
+							AWAutomationBlocks.TORQUE_DISTRIBUTOR_LIGHT.get(), AWAutomationBlocks.TORQUE_DISTRIBUTOR_MEDIUM.get(), AWAutomationBlocks.TORQUE_DISTRIBUTOR_HEAVY.get()).build(null));
 
 	public static void register(IEventBus modEventBus) {
 		BLOCK_ENTITY_TYPES.register(modEventBus);

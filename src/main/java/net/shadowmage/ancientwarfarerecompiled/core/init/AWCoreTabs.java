@@ -36,6 +36,9 @@ public final class AWCoreTabs {
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_SHAFT_HEAVY_ITEM.get());
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.HAND_CRANKED_GENERATOR_ITEM.get());
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.STIRLING_GENERATOR_ITEM.get());
+				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_DISTRIBUTOR_LIGHT_ITEM.get());
+				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_DISTRIBUTOR_MEDIUM_ITEM.get());
+				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_DISTRIBUTOR_HEAVY_ITEM.get());
 				output.accept(AWCoreItems.WOODEN_HAMMER.get());
 				output.accept(AWCoreItems.STONE_HAMMER.get());
 				output.accept(AWCoreItems.IRON_HAMMER.get());

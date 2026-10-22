@@ -27,6 +27,10 @@ public final class AWAutomationItems {
 
 	public static final DeferredItem<BlockItem> STIRLING_GENERATOR_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.STIRLING_GENERATOR);
 
+	public static final DeferredItem<BlockItem> TORQUE_DISTRIBUTOR_LIGHT_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_DISTRIBUTOR_LIGHT);
+	public static final DeferredItem<BlockItem> TORQUE_DISTRIBUTOR_MEDIUM_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_DISTRIBUTOR_MEDIUM);
+	public static final DeferredItem<BlockItem> TORQUE_DISTRIBUTOR_HEAVY_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_DISTRIBUTOR_HEAVY);
+
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
 	}

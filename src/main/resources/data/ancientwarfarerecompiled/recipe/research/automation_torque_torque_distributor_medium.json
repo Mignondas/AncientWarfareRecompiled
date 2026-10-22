@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "the_wheel",
+  "result": {
+    "id": "ancientwarfarerecompiled:torque_distributor_medium"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "GGG",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "tag": "ancientwarfarerecompiled:shafts/iron"
+    },
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    }
+  }
+}

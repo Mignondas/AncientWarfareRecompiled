@@ -22,6 +22,9 @@ PORTED = {
     "ancientwarfareautomation:mailbox": f"{NS}:mailbox",
     "ancientwarfareautomation:hand_cranked_generator": f"{NS}:hand_cranked_generator",
     "ancientwarfareautomation:stirling_generator": f"{NS}:stirling_generator",
+    "ancientwarfareautomation:torque_distributor_light": f"{NS}:torque_distributor_light",
+    "ancientwarfareautomation:torque_distributor_medium": f"{NS}:torque_distributor_medium",
+    "ancientwarfareautomation:torque_distributor_heavy": f"{NS}:torque_distributor_heavy",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)
@@ -227,6 +230,15 @@ def convert_result(res, where):
             report["skip"].append(f"{where}: arbre de couple inconnu {idx}")
             return None
         ident = f"{NS}:torque_shaft_{tiers[idx]}"
+        res = {"item": ident, "count": res.get("count", 1)}
+    # Distributeurs de couple : même principe, léger / moyen / lourd selon la métadonnée
+    if ident == "ancientwarfareautomation:torque_distributor":
+        tiers = ["light", "medium", "heavy"]
+        idx = res.get("data", 0)
+        if not (0 <= idx < len(tiers)):
+            report["skip"].append(f"{where}: distributeur inconnu {idx}")
+            return None
+        ident = f"{NS}:torque_distributor_{tiers[idx]}"
         res = {"item": ident, "count": res.get("count", 1)}
     if ident == "ancientwarfare:component":
         idx = res.get("data", 0)
