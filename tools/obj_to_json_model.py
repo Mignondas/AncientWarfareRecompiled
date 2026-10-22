@@ -94,11 +94,51 @@ def find_rotation(faces, verts):
     return None
 
 
+ALLOWED_ANGLES = (0.0, 22.5, -22.5, 45.0, -45.0)
+
+
+def approx_element(name, faces, verts, uvs, width, height, dy):
+    """Pour un groupe tourné d'un angle non autorisé par Minecraft (seuls 0, ±22.5 et ±45 le sont) :
+    boîte alignée sur l'emprise réelle du groupe. La forme est approchée, pas exacte."""
+    points = [verts[vi] for face in faces for vi, _ in face]
+    mins = [min(p[i] for p in points) for i in range(3)]
+    maxs = [max(p[i] for p in points) for i in range(3)]
+    face_json = {}
+    for face in faces:
+        pts = [verts[vi] for vi, _ in face]
+        # Normale du quad (produit vectoriel), puis axe dominant pour choisir la face de la boîte.
+        a, b, c = pts[0], pts[1], pts[2]
+        n = [(b[1]-a[1])*(c[2]-a[2]) - (b[2]-a[2])*(c[1]-a[1]),
+             (b[2]-a[2])*(c[0]-a[0]) - (b[0]-a[0])*(c[2]-a[2]),
+             (b[0]-a[0])*(c[1]-a[1]) - (b[1]-a[1])*(c[0]-a[0])]
+        ax = max(range(3), key=lambda i: abs(n[i]))
+        step = [0, 0, 0]
+        step[ax] = 1 if n[ax] > 0 else -1
+        key = DIRECTIONS[tuple(step)]
+        if all(ti is not None for _, ti in face):
+            us = [uvs[ti][0] * width for _, ti in face]
+            vs = [(1.0 - uvs[ti][1]) * height for _, ti in face]
+            box = [round(min(us), 4), round(min(vs), 4), round(max(us), 4), round(max(vs), 4)]
+            if key in face_json and "uv" in face_json[key]:
+                o = face_json[key]["uv"]
+                box = [min(o[0], box[0]), min(o[1], box[1]), max(o[2], box[2]), max(o[3], box[3])]
+            face_json[key] = {"texture": "#all", "uv": box}
+        else:
+            face_json.setdefault(key, {"texture": "#all"})
+    return {
+        "from": [round(mins[0] * 16, 4), round((mins[1] + dy) * 16, 4), round(mins[2] * 16, 4)],
+        "to": [round(maxs[0] * 16, 4), round((maxs[1] + dy) * 16, 4), round(maxs[2] * 16, 4)],
+        "faces": face_json,
+    }
+
+
 def element_for(name, faces, verts, uvs, width, height, dy):
     found = find_rotation(faces, verts)
     if found is None:
-        raise ValueError(f"{name}: impossible de rendre le groupe aligné")
+        return approx_element(name, faces, verts, uvs, width, height, dy)
     axis, theta_deg, pivot = found
+    if round(theta_deg, 1) not in ALLOWED_ANGLES:
+        return approx_element(name, faces, verts, uvs, width, height, dy)
     theta = math.radians(theta_deg)
     # Points dans le repère non tourné : l'élément JSON est une boîte alignée.
     unrot = {vi: _rotate(verts[vi], axis, -theta, pivot) for face in faces for vi, _ in face}
