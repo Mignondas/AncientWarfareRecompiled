@@ -19,6 +19,7 @@ NS = "ancientwarfarerecompiled"
 PORTED = {
     "ancientwarfareautomation:chunk_loader_simple": f"{NS}:chunk_loader_simple",
     "ancientwarfareautomation:chunk_loader_deluxe": f"{NS}:chunk_loader_deluxe",
+    "ancientwarfareautomation:mailbox": f"{NS}:mailbox",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)

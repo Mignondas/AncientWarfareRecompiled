@@ -42,6 +42,8 @@ public class AncientWarfareRecompiled {
 		net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.register(modEventBus);
 		net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationTileTypes.register(modEventBus);
 		net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.register(modEventBus);
+		modEventBus.addListener(net.shadowmage.ancientwarfarerecompiled.automation.network.AWAutomationNetwork::register);
+		modEventBus.addListener(net.shadowmage.ancientwarfarerecompiled.automation.capability.AWAutomationCapabilities::register);
 		modEventBus.addListener(CoreNetwork::register);
 
 		modContainer.registerConfig(ModConfig.Type.COMMON, AWCoreConfig.SPEC);

@@ -75,5 +75,13 @@
   "research.ballistics": "Ballistics",
   "research.rocketry": "Rocketry",
   "block.ancientwarfarerecompiled.chunk_loader_simple": "Chargeur de parcelle simple",
-  "block.ancientwarfarerecompiled.chunk_loader_deluxe": "Chargeur de parcelle deluxe"
+  "block.ancientwarfarerecompiled.chunk_loader_deluxe": "Chargeur de parcelle deluxe",
+  "block.ancientwarfarerecompiled.mailbox": "Boîte aux lettres",
+  "guistrings.automation.mailbox_box": "Boîte",
+  "guistrings.automation.mailbox_destination": "Destination",
+  "guistrings.automation.mailbox_private_on": "Privée : oui",
+  "guistrings.automation.mailbox_private_off": "Privée : non",
+  "guistrings.automation.mailbox_save": "Enregistrer",
+  "guistrings.automation.mailbox_input": "Reçu",
+  "guistrings.automation.mailbox_output": "À envoyer"
 }

@@ -18,6 +18,8 @@ public final class AWAutomationItems {
 
 	public static final DeferredItem<BlockItem> CHUNK_LOADER_DELUXE_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.CHUNK_LOADER_DELUXE);
 
+	public static final DeferredItem<BlockItem> MAILBOX_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.MAILBOX);
+
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
 	}

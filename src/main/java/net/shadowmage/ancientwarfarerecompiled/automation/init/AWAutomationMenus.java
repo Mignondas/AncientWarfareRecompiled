@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.automation.menu.ChunkLoaderDeluxeMenu;
+import net.shadowmage.ancientwarfarerecompiled.automation.menu.MailboxMenu;
 
 /**
  * Types de menus du module Automation.
@@ -19,6 +20,9 @@ public final class AWAutomationMenus {
 
 	public static final DeferredHolder<MenuType<?>, MenuType<ChunkLoaderDeluxeMenu>> CHUNK_LOADER_DELUXE =
 			MENUS.register("chunk_loader_deluxe", () -> IMenuTypeExtension.create(ChunkLoaderDeluxeMenu::new));
+
+	public static final DeferredHolder<MenuType<?>, MenuType<MailboxMenu>> MAILBOX =
+			MENUS.register("mailbox", () -> IMenuTypeExtension.create(MailboxMenu::new));
 
 	public static void register(IEventBus modEventBus) {
 		MENUS.register(modEventBus);

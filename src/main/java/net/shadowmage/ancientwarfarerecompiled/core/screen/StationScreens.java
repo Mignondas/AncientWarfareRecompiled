@@ -28,7 +28,7 @@ public final class StationScreens {
 	/*
 	 * Fond de chaque emplacement (sprite vanilla « container/slot »), dessiné sous les objets.
 	 */
-	static void drawSlotBackgrounds(GuiGraphics graphics, AbstractContainerMenu menu, int leftPos, int topPos) {
+	public static void drawSlotBackgrounds(GuiGraphics graphics, AbstractContainerMenu menu, int leftPos, int topPos) {
 		for (Slot slot : menu.slots) {
 			graphics.blitSprite(ResourceLocation.withDefaultNamespace("container/slot"), leftPos + slot.x - 1, topPos + slot.y - 1, 18, 18);
 		}
@@ -39,6 +39,7 @@ public final class StationScreens {
 		event.register(AWCoreMenus.ENGINEERING_STATION.get(), EngineeringStationScreen::new);
 		event.register(AWCoreMenus.RESEARCH_STATION.get(), ResearchStationScreen::new);
 		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.CHUNK_LOADER_DELUXE.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.ChunkLoaderDeluxeScreen::new);
+		event.register(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationMenus.MAILBOX.get(), net.shadowmage.ancientwarfarerecompiled.automation.screen.MailboxScreen::new);
 		event.register(AWCoreMenus.RESEARCH_BOOK.get(), net.shadowmage.ancientwarfarerecompiled.core.research.client.ResearchBookScreen::new);
 	}
 

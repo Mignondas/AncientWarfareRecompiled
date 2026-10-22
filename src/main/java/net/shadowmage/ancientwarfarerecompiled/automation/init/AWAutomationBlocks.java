@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockChunkLoaderDeluxe;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockChunkLoaderSimple;
+import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockMailbox;
 
 /**
  * Blocs du module Automation.
@@ -24,6 +25,10 @@ public final class AWAutomationBlocks {
 
 	public static final DeferredBlock<BlockChunkLoaderDeluxe> CHUNK_LOADER_DELUXE = BLOCKS.registerBlock("chunk_loader_deluxe",
 			BlockChunkLoaderDeluxe::new,
+			BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0f).sound(SoundType.STONE).requiresCorrectToolForDrops());
+
+	public static final DeferredBlock<BlockMailbox> MAILBOX = BLOCKS.registerBlock("mailbox",
+			BlockMailbox::new,
 			BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(2.0f).sound(SoundType.STONE).requiresCorrectToolForDrops());
 
 	public static void register(IEventBus modEventBus) {

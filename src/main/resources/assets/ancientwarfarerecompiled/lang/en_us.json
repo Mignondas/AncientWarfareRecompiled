@@ -75,5 +75,13 @@
   "research.ballistics": "Ballistics",
   "research.rocketry": "Rocketry",
   "block.ancientwarfarerecompiled.chunk_loader_simple": "Simple Chunk Loader",
-  "block.ancientwarfarerecompiled.chunk_loader_deluxe": "Deluxe Chunk Loader"
+  "block.ancientwarfarerecompiled.chunk_loader_deluxe": "Deluxe Chunk Loader",
+  "block.ancientwarfarerecompiled.mailbox": "Mailbox",
+  "guistrings.automation.mailbox_box": "Mailbox",
+  "guistrings.automation.mailbox_destination": "Destination",
+  "guistrings.automation.mailbox_private_on": "Private: yes",
+  "guistrings.automation.mailbox_private_off": "Private: no",
+  "guistrings.automation.mailbox_save": "Save",
+  "guistrings.automation.mailbox_input": "Received",
+  "guistrings.automation.mailbox_output": "To send"
 }
