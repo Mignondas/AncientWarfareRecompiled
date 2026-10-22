@@ -3,10 +3,10 @@
 Convertit un OBJ de bloc d'Ancient Warfare 2 en modèle JSON de bloc (éléments cuboïdes, UV par face).
 
 Chaque groupe de l'OBJ doit être une boîte alignée sur les axes (6 faces, quads), ce qui est le cas
-pour les arbres de couple et la manivelle. Les UV viennent de l'atlas d'origine (texture_size = taille de l'atlas).
+pour les arbres de couple et la manivelle. Les UV sont normalisées sur 0..16 (pas de texture_size) : Minecraft étale alors toute la texture sur 0..16.
 
 Usage :
-  obj_to_json_model.py <fichier.obj> <largeur_atlas> <hauteur_atlas> <decalage_y> <id_texture> <sortie.json>
+  obj_to_json_model.py <fichier.obj> <largeur_atlas> <hauteur_atlas> (non utilisés, conservés pour compatibilité) <decalage_y> <id_texture> <sortie.json>
 
 <decalage_y> est ajouté à Y (en blocs) : 0.5 pour les arbres (l'OBJ est centré en Y=0), 0 pour la manivelle.
 """
@@ -116,8 +116,8 @@ def approx_element(name, faces, verts, uvs, width, height, dy):
         step[ax] = 1 if n[ax] > 0 else -1
         key = DIRECTIONS[tuple(step)]
         if all(ti is not None for _, ti in face):
-            us = [uvs[ti][0] * width for _, ti in face]
-            vs = [(1.0 - uvs[ti][1]) * height for _, ti in face]
+            us = [uvs[ti][0] * 16 for _, ti in face]
+            vs = [(1.0 - uvs[ti][1]) * 16 for _, ti in face]
             box = [round(min(us), 4), round(min(vs), 4), round(max(us), 4), round(max(vs), 4)]
             if key in face_json and "uv" in face_json[key]:
                 o = face_json[key]["uv"]
@@ -164,8 +164,8 @@ def element_for(name, faces, verts, uvs, width, height, dy):
         key = DIRECTIONS[direction]
         entry = {"texture": "#all"}
         if all(ti is not None for _, ti in face):
-            us = [uvs[ti][0] * width for _, ti in face]
-            vs = [(1.0 - uvs[ti][1]) * height for _, ti in face]
+            us = [uvs[ti][0] * 16 for _, ti in face]
+            vs = [(1.0 - uvs[ti][1]) * 16 for _, ti in face]
             box = [min(us), min(vs), max(us), max(vs)]
             entry["uv"] = [round(v, 4) for v in box]
         face_json[key] = entry
@@ -195,7 +195,6 @@ def main():
     verts, uvs, groups = parse(obj)
     elements = [element_for(name, faces, verts, uvs, width, height, dy) for name, faces in groups.items() if faces]
     model = {
-        "texture_size": [width, height],
         "elements": elements,
         "textures": {"all": texture_id, "particle": texture_id},
     }
