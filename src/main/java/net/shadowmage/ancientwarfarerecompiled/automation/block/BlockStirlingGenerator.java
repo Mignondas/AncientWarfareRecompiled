@@ -80,6 +80,9 @@ public class BlockStirlingGenerator extends Block implements EntityBlock, IHamme
 			return InteractionResult.SUCCESS;
 		}
 		if (player instanceof ServerPlayer serverPlayer) {
+			if (level.getBlockEntity(pos) instanceof TileStirlingGenerator stirling) {
+				stirling.showValues(player);
+			}
 			serverPlayer.openMenu(new SimpleMenuProvider((id, inv, p) -> new StirlingGeneratorMenu(id, inv, pos),
 					Component.translatable("block.ancientwarfarerecompiled.stirling_generator")), buf -> buf.writeBlockPos(pos));
 		}
