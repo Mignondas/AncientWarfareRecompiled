@@ -40,7 +40,7 @@ public class ResearchBookScreen extends AbstractContainerScreen<ResearchBookMenu
 	}
 
 	@Override
-	public void tick() {
+	protected void containerTick() {
 		if (builtVersion != ClientResearchData.version()) {
 			rebuild();
 		}
