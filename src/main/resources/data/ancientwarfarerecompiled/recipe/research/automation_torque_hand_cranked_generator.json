@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "the_wheel",
+  "result": {
+    "id": "ancientwarfarerecompiled:hand_cranked_generator"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "GIG",
+    "III"
+  ],
+  "key": {
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/iron"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    }
+  }
+}

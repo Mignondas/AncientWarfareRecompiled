@@ -20,6 +20,7 @@ PORTED = {
     "ancientwarfareautomation:chunk_loader_simple": f"{NS}:chunk_loader_simple",
     "ancientwarfareautomation:chunk_loader_deluxe": f"{NS}:chunk_loader_deluxe",
     "ancientwarfareautomation:mailbox": f"{NS}:mailbox",
+    "ancientwarfareautomation:hand_cranked_generator": f"{NS}:hand_cranked_generator",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)
@@ -217,6 +218,15 @@ def convert_result(res, where):
         report["skip"].append(f"{where}: résultat invalide")
         return None
     ident = res["item"]
+    # Arbres de couple : la métadonnée choisit léger / moyen / lourd, qui sont trois blocs distincts
+    if ident == "ancientwarfareautomation:torque_shaft":
+        tiers = ["light", "medium", "heavy"]
+        idx = res.get("data", 0)
+        if not (0 <= idx < len(tiers)):
+            report["skip"].append(f"{where}: arbre de couple inconnu {idx}")
+            return None
+        ident = f"{NS}:torque_shaft_{tiers[idx]}"
+        res = {"item": ident, "count": res.get("count", 1)}
     if ident == "ancientwarfare:component":
         idx = res.get("data", 0)
         if not (0 <= idx < len(COMPONENT)):

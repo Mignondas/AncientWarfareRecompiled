@@ -20,6 +20,11 @@ public final class AWAutomationItems {
 
 	public static final DeferredItem<BlockItem> MAILBOX_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.MAILBOX);
 
+	public static final DeferredItem<BlockItem> TORQUE_SHAFT_LIGHT_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_SHAFT_LIGHT);
+	public static final DeferredItem<BlockItem> TORQUE_SHAFT_MEDIUM_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_SHAFT_MEDIUM);
+	public static final DeferredItem<BlockItem> TORQUE_SHAFT_HEAVY_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_SHAFT_HEAVY);
+	public static final DeferredItem<BlockItem> HAND_CRANKED_GENERATOR_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.HAND_CRANKED_GENERATOR);
+
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
 	}

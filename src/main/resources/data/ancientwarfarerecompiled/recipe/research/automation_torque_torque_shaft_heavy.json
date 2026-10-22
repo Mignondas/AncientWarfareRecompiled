@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "mass_production",
+  "result": {
+    "id": "ancientwarfarerecompiled:torque_shaft_heavy"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S",
+    "G"
+  ],
+  "key": {
+    "S": {
+      "tag": "ancientwarfarerecompiled:shafts/steel"
+    },
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/steel"
+    }
+  }
+}

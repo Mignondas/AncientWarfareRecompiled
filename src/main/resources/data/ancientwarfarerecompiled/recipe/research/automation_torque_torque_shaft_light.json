@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "the_wheel",
+  "result": {
+    "id": "ancientwarfarerecompiled:torque_shaft_light"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S",
+    "G"
+  ],
+  "key": {
+    "S": {
+      "tag": "ancientwarfarerecompiled:shafts/wooden"
+    },
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/wooden"
+    }
+  }
+}

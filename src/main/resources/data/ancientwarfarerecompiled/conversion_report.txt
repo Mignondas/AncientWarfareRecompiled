@@ -1,6 +1,6 @@
-Résumé : recipe=12, research=30, research_recipe=14, tags=10
+Résumé : recipe=12, research=30, research_recipe=18, tags=10
 
-Ignorés (294) :
+Ignorés (290) :
   - recipes/core/manual.json: résultat non porté ancientwarfare:manual
   - recipes/npc/diamond_halberd.json: résultat non porté ancientwarfarenpc:diamond_halberd
   - recipes/npc/diamond_lance.json: résultat non porté ancientwarfarenpc:diamond_lance
@@ -34,7 +34,6 @@ Ignorés (294) :
   - research_recipes/automation/torque/flywheel_storage_heavy.json: résultat non porté ancientwarfareautomation:flywheel_storage
   - research_recipes/automation/torque/flywheel_storage_light.json: résultat non porté ancientwarfareautomation:flywheel_storage
   - research_recipes/automation/torque/flywheel_storage_medium.json: résultat non porté ancientwarfareautomation:flywheel_storage
-  - research_recipes/automation/torque/hand_cranked_generator.json: résultat non porté ancientwarfareautomation:hand_cranked_generator
   - research_recipes/automation/torque/stirling_generator.json: résultat non porté ancientwarfareautomation:stirling_generator
   - research_recipes/automation/torque/torque_distributor_heavy.json: résultat non porté ancientwarfareautomation:torque_distributor
   - research_recipes/automation/torque/torque_distributor_light.json: résultat non porté ancientwarfareautomation:torque_distributor
@@ -42,9 +41,6 @@ Ignorés (294) :
   - research_recipes/automation/torque/torque_junction_heavy.json: résultat non porté ancientwarfareautomation:torque_junction
   - research_recipes/automation/torque/torque_junction_light.json: résultat non porté ancientwarfareautomation:torque_junction
   - research_recipes/automation/torque/torque_junction_medium.json: résultat non porté ancientwarfareautomation:torque_junction
-  - research_recipes/automation/torque/torque_shaft_heavy.json: résultat non porté ancientwarfareautomation:torque_shaft
-  - research_recipes/automation/torque/torque_shaft_light.json: résultat non porté ancientwarfareautomation:torque_shaft
-  - research_recipes/automation/torque/torque_shaft_medium.json: résultat non porté ancientwarfareautomation:torque_shaft
   - research_recipes/automation/torque/waterwheel_generator.json: résultat non porté ancientwarfareautomation:waterwheel_generator
   - research_recipes/automation/torque/windmill_blade.json: résultat non porté ancientwarfareautomation:windmill_blade
   - research_recipes/automation/torque/windmill_generator.json: résultat non porté ancientwarfareautomation:windmill_generator

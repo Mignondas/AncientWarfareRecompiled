@@ -83,5 +83,10 @@
   "guistrings.automation.mailbox_private_off": "Privée : non",
   "guistrings.automation.mailbox_save": "Enregistrer",
   "guistrings.automation.mailbox_input": "Reçu",
-  "guistrings.automation.mailbox_output": "À envoyer"
+  "guistrings.automation.mailbox_output": "À envoyer",
+  "block.ancientwarfarerecompiled.torque_shaft_light": "Arbre de couple léger",
+  "block.ancientwarfarerecompiled.torque_shaft_medium": "Arbre de couple moyen",
+  "block.ancientwarfarerecompiled.torque_shaft_heavy": "Arbre de couple lourd",
+  "block.ancientwarfarerecompiled.hand_cranked_generator": "Générateur à manivelle",
+  "guistrings.automation.torque.values": "Couple : %1$s, entrée : %2$s, sortie : %3$s, perte : %4$s"
 }

@@ -83,5 +83,10 @@
   "guistrings.automation.mailbox_private_off": "Private: no",
   "guistrings.automation.mailbox_save": "Save",
   "guistrings.automation.mailbox_input": "Received",
-  "guistrings.automation.mailbox_output": "To send"
+  "guistrings.automation.mailbox_output": "To send",
+  "block.ancientwarfarerecompiled.torque_shaft_light": "Light Torque Shaft",
+  "block.ancientwarfarerecompiled.torque_shaft_medium": "Medium Torque Shaft",
+  "block.ancientwarfarerecompiled.torque_shaft_heavy": "Heavy Torque Shaft",
+  "block.ancientwarfarerecompiled.hand_cranked_generator": "Hand-Cranked Generator",
+  "guistrings.automation.torque.values": "Torque: %1$s, in: %2$s, out: %3$s, loss: %4$s"
 }
