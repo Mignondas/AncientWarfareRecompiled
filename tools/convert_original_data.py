@@ -103,7 +103,11 @@ COMPONENT = ["wooden_gear_set", "iron_gear_set", "steel_gear_set", "wooden_beari
              "steel_bearings", "wooden_torque_shaft", "iron_torque_shaft", "steel_torque_shaft"]
 
 # Objets vanilla renommés ou éclatés en 1.21 (métadonnée -> objet distinct)
-VANILLA_RENAME = {"minecraft:noteblock": "minecraft:note_block", "minecraft:golden_rail": "minecraft:powered_rail"}
+VANILLA_RENAME = {
+    "minecraft:noteblock": "minecraft:note_block",
+    "minecraft:golden_rail": "minecraft:powered_rail",
+    "minecraft:stonebrick": "minecraft:stone_bricks",
+}
 WOOL = ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
         "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
 DYE = ["black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray",

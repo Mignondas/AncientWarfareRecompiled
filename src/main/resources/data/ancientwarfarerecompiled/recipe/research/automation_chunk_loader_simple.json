@@ -12,7 +12,7 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:stonebrick"
+      "item": "minecraft:stone_bricks"
     },
     "E": {
       "tag": "c:ender_pearls"
