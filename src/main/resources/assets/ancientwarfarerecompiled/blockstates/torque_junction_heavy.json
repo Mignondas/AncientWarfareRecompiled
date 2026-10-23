@@ -1,10 +1,411 @@
 {
-  "variants": {
-    "facing=north": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "y": 0 },
-    "facing=south": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "y": 180 },
-    "facing=west": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "y": 270 },
-    "facing=east": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "y": 90 },
-    "facing=up": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "x": 270 },
-    "facing=down": { "model": "ancientwarfarerecompiled:block/torque_junction_heavy", "x": 90 }
-  }
+  "multipart": [
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body"
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_body",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down"
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "up",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_up",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_down",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_east",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_west",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_south",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "down",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ancientwarfarerecompiled:block/torque_junction_heavy_arm_north",
+        "x": 90
+      }
+    }
+  ]
 }

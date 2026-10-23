@@ -4,8 +4,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.shadowmage.ancientwarfarerecompiled.automation.block.TorqueSides;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.ITorque.ITorqueTile;
 import net.shadowmage.ancientwarfarerecompiled.core.interfaces.ITorque.SidedTorqueCell;
 
@@ -28,6 +30,11 @@ public abstract class TileTorqueSidedCell extends TileTorqueBase {
 	}
 
 	public void serverTick() {
+		BlockState current = getBlockState();
+		BlockState shown = TorqueSides.withConnections(current, getConnections());
+		if (shown != current && level != null) {
+			level.setBlock(worldPosition, shown, Block.UPDATE_CLIENTS);
+		}
 		torqueIn = getTotalTorque() - prevEnergy;
 		balanceStorage();
 		torqueLoss = applyPowerLoss();

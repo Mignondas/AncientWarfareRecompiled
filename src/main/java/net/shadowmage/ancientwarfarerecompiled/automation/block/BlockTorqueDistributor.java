@@ -30,7 +30,7 @@ public class BlockTorqueDistributor extends Block implements EntityBlock, IHamme
 	public BlockTorqueDistributor(Properties properties, TorqueTier tier) {
 		super(properties);
 		this.tier = tier;
-		registerDefaultState(stateDefinition.any().setValue(BlockStateProperties.FACING, Direction.NORTH));
+		registerDefaultState(TorqueSides.withDefaults(stateDefinition.any().setValue(BlockStateProperties.FACING, Direction.NORTH)));
 	}
 
 	public TorqueTier getTier() {
@@ -45,6 +45,7 @@ public class BlockTorqueDistributor extends Block implements EntityBlock, IHamme
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(BlockStateProperties.FACING);
+		TorqueSides.addProperties(builder);
 	}
 
 	@Override
