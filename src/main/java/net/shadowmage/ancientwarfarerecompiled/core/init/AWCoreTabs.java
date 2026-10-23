@@ -42,6 +42,7 @@ public final class AWCoreTabs {
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_JUNCTION_LIGHT_ITEM.get());
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_JUNCTION_MEDIUM_ITEM.get());
 				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.TORQUE_JUNCTION_HEAVY_ITEM.get());
+				output.accept(net.shadowmage.ancientwarfarerecompiled.automation.init.AWAutomationItems.WINDMILL_BLADE_ITEM.get());
 				output.accept(AWCoreItems.WOODEN_HAMMER.get());
 				output.accept(AWCoreItems.STONE_HAMMER.get());
 				output.accept(AWCoreItems.IRON_HAMMER.get());

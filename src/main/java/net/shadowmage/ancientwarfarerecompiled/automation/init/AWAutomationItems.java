@@ -35,6 +35,8 @@ public final class AWAutomationItems {
 	public static final DeferredItem<BlockItem> TORQUE_JUNCTION_MEDIUM_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_JUNCTION_MEDIUM);
 	public static final DeferredItem<BlockItem> TORQUE_JUNCTION_HEAVY_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.TORQUE_JUNCTION_HEAVY);
 
+	public static final DeferredItem<BlockItem> WINDMILL_BLADE_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.WINDMILL_BLADE);
+
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
 	}

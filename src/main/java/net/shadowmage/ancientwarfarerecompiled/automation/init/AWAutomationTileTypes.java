@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowmage.ancientwarfarerecompiled.AncientWarfareRecompiled;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileChunkLoaderDeluxe;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileMailbox;
+import net.shadowmage.ancientwarfarerecompiled.automation.tile.TileWindmillBlade;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileConduit;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileDistributor;
 import net.shadowmage.ancientwarfarerecompiled.automation.tile.torque.TileHandCrankedGenerator;
@@ -52,6 +53,10 @@ public final class AWAutomationTileTypes {
 			BLOCK_ENTITY_TYPES.register("torque_junction_tile",
 					() -> BlockEntityType.Builder.of(TileConduit::new,
 							AWAutomationBlocks.TORQUE_JUNCTION_LIGHT.get(), AWAutomationBlocks.TORQUE_JUNCTION_MEDIUM.get(), AWAutomationBlocks.TORQUE_JUNCTION_HEAVY.get()).build(null));
+
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileWindmillBlade>> WINDMILL_BLADE =
+			BLOCK_ENTITY_TYPES.register("windmill_blade_tile",
+					() -> BlockEntityType.Builder.of(TileWindmillBlade::new, AWAutomationBlocks.WINDMILL_BLADE.get()).build(null));
 
 	public static void register(IEventBus modEventBus) {
 		BLOCK_ENTITY_TYPES.register(modEventBus);
