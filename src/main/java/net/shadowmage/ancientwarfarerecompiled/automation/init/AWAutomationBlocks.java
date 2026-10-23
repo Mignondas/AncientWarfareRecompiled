@@ -15,6 +15,7 @@ import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockStirlingGen
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueDistributor;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueJunction;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockWindmillBlade;
+import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockWindmillGenerator;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.BlockTorqueShaft;
 import net.shadowmage.ancientwarfarerecompiled.automation.block.TorqueTier;
 
@@ -76,6 +77,10 @@ public final class AWAutomationBlocks {
 
 	public static final DeferredBlock<BlockWindmillBlade> WINDMILL_BLADE = BLOCKS.registerBlock("windmill_blade",
 			BlockWindmillBlade::new,
+			BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f).sound(SoundType.WOOD).noOcclusion());
+
+	public static final DeferredBlock<BlockWindmillGenerator> WINDMILL_GENERATOR = BLOCKS.registerBlock("windmill_generator",
+			BlockWindmillGenerator::new,
 			BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0f).sound(SoundType.WOOD).noOcclusion());
 
 	public static void register(IEventBus modEventBus) {

@@ -96,5 +96,6 @@
   "block.ancientwarfarerecompiled.torque_junction_medium": "Jonction de couple moyenne",
   "block.ancientwarfarerecompiled.torque_junction_heavy": "Jonction de couple lourde",
   "block.ancientwarfarerecompiled.windmill_blade": "Pale d'éolienne",
+  "block.ancientwarfarerecompiled.windmill_generator": "Générateur éolien",
   "guistrings.automation.torque.values": "Couple : %1$s, entrée : %2$s, sortie : %3$s, perte : %4$s"
 }

@@ -96,5 +96,6 @@
   "block.ancientwarfarerecompiled.torque_junction_medium": "Medium Torque Junction",
   "block.ancientwarfarerecompiled.torque_junction_heavy": "Heavy Torque Junction",
   "block.ancientwarfarerecompiled.windmill_blade": "Windmill Blade",
+  "block.ancientwarfarerecompiled.windmill_generator": "Windmill Generator",
   "guistrings.automation.torque.values": "Torque: %1$s, in: %2$s, out: %3$s, loss: %4$s"
 }

@@ -28,6 +28,8 @@ PORTED = {
     "ancientwarfareautomation:torque_junction_light": f"{NS}:torque_junction_light",
     "ancientwarfareautomation:torque_junction_medium": f"{NS}:torque_junction_medium",
     "ancientwarfareautomation:torque_junction_heavy": f"{NS}:torque_junction_heavy",
+    "ancientwarfareautomation:windmill_generator": f"{NS}:windmill_generator",
+    "ancientwarfareautomation:windmill_blade": f"{NS}:windmill_blade",
 }
 
 # Objets du mod d'origine -> objets portés (seuls ceux qui existent déjà dans le projet)

@@ -36,6 +36,10 @@ public final class AWCoreConfig {
 					"Une valeur égale ou inférieure à 0 désactive les ouvriers.")
 			.defineInRange("energy_per_work_unit", 50.0D, 0.0D, Double.MAX_VALUE);
 
+	public static final ModConfigSpec.DoubleValue WINDMILL_PER_SIZE_OUTPUT = BUILDER
+			.comment("Énergie de couple par pale de la colonne d'éolienne (proportionnel à la taille).")
+			.defineInRange("windmill_per_size_output", 1.0D, 0.0D, Double.MAX_VALUE);
+
 	public static final ModConfigSpec.DoubleValue STIRLING_GENERATOR_OUTPUT = BUILDER
 			.comment("Énergie de couple ajoutée par tick au générateur Stirling tant qu'il brûle du combustible.")
 			.defineInRange("stirling_generator_output", 1.0D, 0.0D, Double.MAX_VALUE);

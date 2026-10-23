@@ -37,6 +37,8 @@ public final class AWAutomationItems {
 
 	public static final DeferredItem<BlockItem> WINDMILL_BLADE_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.WINDMILL_BLADE);
 
+	public static final DeferredItem<BlockItem> WINDMILL_GENERATOR_ITEM = ITEMS.registerSimpleBlockItem(AWAutomationBlocks.WINDMILL_GENERATOR);
+
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
 	}

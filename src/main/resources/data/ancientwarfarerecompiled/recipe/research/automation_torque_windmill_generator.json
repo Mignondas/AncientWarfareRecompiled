@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "the_wheel",
+  "result": {
+    "id": "ancientwarfarerecompiled:windmill_generator"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "GPG",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "G": {
+      "tag": "ancientwarfarerecompiled:gears/wooden"
+    }
+  }
+}

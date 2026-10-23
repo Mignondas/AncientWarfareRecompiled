@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "research": "the_wheel",
+  "result": {
+    "id": "ancientwarfarerecompiled:windmill_blade"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCS",
+    "CSC",
+    "SCS"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:white_wool"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  }
+}
